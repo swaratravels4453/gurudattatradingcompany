@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5"/>
+<title>Spring Products Catalogue | Gurudatta Trading Co. Mumbai</title>
+<meta name="description" content="100+ spring products — Mild Steel, Stainless Steel, Compression, Extension, Torsion Springs, Hooks, Circlips, Snap Rings from Mumbai."/>
+<meta name="keywords" content="mild steel springs catalogue, stainless steel springs India, compression spring supplier, extension springs Mumbai, torsion springs manufacturer India"/>
+<meta name="author" content="Gurudatta Trading Co."/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="IN-MH"/>
+<meta name="geo.placename" content="Mumbai, Maharashtra"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Spring Products | Gurudatta Trading Co."/>
+<meta property="og:description" content="100+ spring products — Mild Steel, Stainless Steel, Compression, Extension, Torsion Springs, Hooks, Circlips, Snap Rings from Mumbai."/>
+<meta property="og:image" content="https://2.wlimg.com/company_logo/13516914.jpg"/>
+<meta property="og:site_name" content="Gurudatta Trading Co."/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"LocalBusiness",
+  "name":"Gurudatta Trading Co.",
+  "description":"Mild Steel Springs Manufacturer and Supplier from Mumbai, India.",
+  "url":"https://www.gurudattatradingco.in",
+  "telephone":"+918454995315",
+  "email":"gurudattatradingco@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   GURUDATTA TRADING CO. — styles.css
+   Sections:
+     1.  Variables & Reset
+     2.  Utility Classes
+     3.  Header
+     4.  Hero
+     5.  Calculator (SpringCreator-style)
+     6.  Products + Modal
+     7.  Testimonials
+     8.  Contact
+     9.  Footer
+    10.  Mobile Bottom Nav
+    11.  Keyframe Animations
+    12.  Responsive Breakpoints
+   ============================================================ */
+
+/* ===== 1. VARIABLES & RESET ===== */
+:root {
+  --navy:        #0a0f1e;
+  --navy-mid:    #0d1630;
+  --navy-light:  #152040;
+  --steel:       #1e2d4a;
+  --steel-mid:   #263556;
+  --accent:      #f0a500;
+  --accent-dim:  #c78a00;
+  --highlight:   #3b8bff;
+  --teal:        #0d5c7a;
+  --teal-dark:   #0a4a62;
+  --teal-pale:   #e8f4fb;
+  --white:       #ffffff;
+  --offwhite:    #e8edf5;
+  --grey:        #8a9ab8;
+  --grey-light:  #b0bdd4;
+  --border:      rgba(255, 255, 255, 0.08);
+  --card-bg:     rgba(21, 32, 64, 0.92);
+  --radius:      10px;
+  --tr:          0.24s ease;
+  --ff-d:        'Barlow Condensed', sans-serif;
+  --ff-b:        'Barlow', sans-serif;
+  --ff-a:        'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-b);
+  background: var(--navy);
+  color: var(--offwhite);
+  overflow-x: hidden;
+  padding-bottom: 72px; /* space for mobile bottom nav */
+}
+
+/* ===== 2. UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section label (small caps above title) */
+.sec-label {
+  display: block;
+  font-family: var(--ff-a);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* Section heading */
+.sec-title {
+  font-family: var(--ff-d);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+/* Section sub-paragraph */
+.sec-sub {
+  font-size: 1rem;
+  color: var(--grey-light);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Shared button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-a);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--tr);
+  text-decoration: none;
+}
+.btn-primary { background: var(--accent); color: var(--navy); }
+.btn-primary:hover { background: var(--accent-dim); transform: translateY(-2px); box-shadow: 0 0 20px rgba(240,165,0,0.3); }
+.btn-outline  { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+.btn-outline:hover  { background: var(--accent); color: var(--navy); transform: translateY(-2px); }
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Dark-theme shared form fields (used in Contact section) */
+.field-group    { margin-bottom: 16px; }
+.field-label    { display: block; font-family: var(--ff-a); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 6px; }
+.field-label .req { color: var(--accent); }
+.field-input    { width: 100%; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 11px 14px; font-family: var(--ff-b); font-size: 14px; color: var(--white); transition: all var(--tr); outline: none; }
+.field-input::placeholder { color: rgba(255,255,255,0.22); }
+.field-input:focus  { border-color: var(--accent); background: rgba(240,165,0,0.05); box-shadow: 0 0 0 3px rgba(240,165,0,0.1); }
+.field-input.err    { border-color: #e74c3c; }
+.field-error        { font-size: 11px; color: #e74c3c; margin-top: 4px; display: none; }
+.field-error.show   { display: block; }
+
+
+/* ============================= */
+/* ===== 3. HEADER SECTION ===== */
+/* ============================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 30, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--tr);
+}
+header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
+/* Inner flex row */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+
+/* Logo */
+.logo { text-decoration: none; display: flex; flex-direction: column; }
+.logo-name { font-family: var(--ff-d); font-weight: 900; font-size: 18px; color: var(--white); letter-spacing: 1px; line-height: 1; }
+.logo-name span { color: var(--accent); }
+.logo-tag  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 2px; color: var(--grey); text-transform: uppercase; margin-top: 2px; }
+
+/* Desktop navigation links */
+nav { display: flex; gap: 2px; }
+nav a { font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 8px 15px; border-radius: 6px; transition: all var(--tr); }
+nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1); }
+
+/* Hamburger toggle button */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--offwhite); border-radius: 2px; transition: all var(--tr); }
+
+/* Mobile nav drawer */
+.mob-drawer { display: none; flex-direction: column; background: var(--navy-mid); border-top: 1px solid var(--border); padding: 12px 0; }
+.mob-drawer a { font-family: var(--ff-a); font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 13px 24px; border-bottom: 1px solid var(--border); transition: color var(--tr); }
+.mob-drawer a:hover { color: var(--accent); }
+.mob-drawer.open { display: flex; }
+
+
+/* ============================= */
+/* ===== 4. HERO SECTION ===== */
+/* ============================= */
+#home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 66px;
+  overflow: hidden;
+}
+
+/* Subtle grid background lines */
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,139,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,139,255,0.035) 1px, transparent 1px);
+  background-size: 55px 55px;
+  pointer-events: none;
+}
+
+/* Radial glow orbs */
+.hero-glow1 { position: absolute; top: 15%; right: 3%; width: 480px; height: 480px; background: radial-gradient(circle, rgba(240,165,0,0.11) 0%, transparent 70%); pointer-events: none; }
+.hero-glow2 { position: absolute; bottom: 5%; left: -80px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(59,139,255,0.09) 0%, transparent 70%); pointer-events: none; }
+
+/* Decorative spring SVG (desktop only) */
+.hero-spring { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44%; max-width: 540px; opacity: 0.8; pointer-events: none; }
+
+/* Hero content block */
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+
+/* Animated top badge */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.28);
+  border-radius: 50px; padding: 5px 16px;
+  font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+
+/* Main H1 */
+.hero-h1 { font-family: var(--ff-d); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 18px; animation: fadeUp 0.6s 0.15s ease both; }
+.hero-h1 .acc { color: var(--accent); }
+.hero-h1 .hl  { color: var(--highlight); }
+
+/* Subheadline */
+.hero-sub { font-size: 1.05rem; color: var(--grey-light); line-height: 1.75; margin-bottom: 32px; animation: fadeUp 0.6s 0.28s ease both; }
+
+/* CTA buttons row */
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
+
+/* Stats strip */
+.hero-stats { display: flex; gap: 28px; margin-top: 50px; padding-top: 28px; border-top: 1px solid var(--border); animation: fadeUp 0.6s 0.52s ease both; flex-wrap: wrap; }
+.stat-num { font-family: var(--ff-d); font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.stat-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-top: 3px; }
+
+
+/* ============================================================ */
+/* ===== 5. CALCULATOR SECTION (SpringCreator-style) ===== */
+/* ============================================================ */
+#calculator {
+  background: var(--navy-mid);
+  padding: 90px 0 100px;
+  position: relative;
+}
+/* Accent top line */
+#calculator::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Two-column layout */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 52px;
+  align-items: start;
+}
+.calc-intro .sec-sub { margin-bottom: 24px; }
+
+/* Feature list on the left */
+.calc-feature-list { list-style: none; margin-top: 22px; }
+.calc-feature-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13.5px; color: var(--grey-light);
+  margin-bottom: 13px; line-height: 1.55;
+}
+.calc-feature-list li .ck {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background: rgba(240,165,0,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 11px; margin-top: 1px;
+}
+
+/* ---- Main white calculator card ---- */
+.calc-card {
+  background: var(--white);
+  border-radius: 14px;
+  /* IMPORTANT: no overflow:hidden — prevents result panel from being clipped */
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Dark teal header bar */
+.calc-header {
+  background: var(--teal);
+  padding: 18px 24px;
+  text-align: center;
+  border-radius: 14px 14px 0 0;
+}
+.calc-header h2 {
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.4rem; letter-spacing: 2px;
+  color: var(--white); text-transform: uppercase;
+}
+
+/* Spring type tabs */
+.calc-tabs-row {
+  padding: 16px 20px 0;
+  background: var(--white);
+}
+.calc-tabs-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.calc-tabs-label, .unit-label {
+  font-size: 12px;
+  color: #555;
+  font-family: var(--ff-b);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Three spring-type tab buttons */
+.calc-tabs {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+.calc-tab {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 6px;
+  border: 1.5px solid #c8d8e0; border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase;
+  color: #444; background: var(--white);
+  transition: all var(--tr);
+  white-space: nowrap;
+}
+.calc-tab svg { width: 20px; height: 20px; flex-shrink: 0; }
+.calc-tab.active                { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.calc-tab:not(.active):hover    { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* English / Metric toggle */
+.unit-wrap { flex-shrink: 0; }
+.unit-btns {
+  display: flex;
+  border: 1.5px solid #c8d8e0; border-radius: 6px; overflow: hidden;
+}
+.unit-btn {
+  padding: 7px 16px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 1px;
+  cursor: pointer; border: none;
+  background: var(--white); color: #444;
+  transition: all var(--tr);
+}
+.unit-btn.active              { background: var(--teal); color: var(--white); }
+.unit-btn:not(.active):hover  { background: var(--teal-pale); color: var(--teal); }
+
+/* Info / hint banner */
+.calc-banner {
+  margin: 10px 20px 0;
+  background: var(--teal-pale);
+  border: 1px solid #c0dce8;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px; color: #2d5a6e; line-height: 1.6; text-align: center;
+}
+.calc-banner strong { color: var(--teal); }
+
+/* ---- 4-column parameter inputs ---- */
+.calc-params {
+  padding: 14px 20px 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Single parameter column */
+.cparam { display: flex; flex-direction: column; gap: 4px; }
+
+/* Label above each field */
+.cparam-label {
+  font-size: 10.5px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); line-height: 1.3;
+}
+.cparam-label .unit-hint { font-size: 10px; color: #888; font-weight: 400; }
+
+/* Exact / Range badges */
+.design-badge { display: flex; gap: 4px; }
+.design-badge .db {
+  font-size: 10px;
+  background: var(--teal-pale); border: 1px solid var(--teal);
+  color: var(--teal); padding: 2px 7px; border-radius: 3px;
+  cursor: pointer; font-family: var(--ff-a); font-weight: 600;
+  transition: all var(--tr);
+}
+.design-badge .db.active { background: var(--teal); color: var(--white); }
+
+/* Input row inside a param (min — max) */
+.cparam-inputs { display: flex; align-items: center; gap: 4px; }
+.cparam-input {
+  flex: 1; min-width: 0;
+  padding: 8px 8px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 13px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cparam-input:focus  { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cparam-input.err    { border-color: #e74c3c; }
+.cparam-dash  { color: #aaa; font-size: 13px; flex-shrink: 0; }
+.cparam-unit  { font-size: 10px; color: #666; font-family: var(--ff-b); font-weight: 600; flex-shrink: 0; }
+.cparam-sub   { font-size: 9.5px; color: #bbb; text-align: center; font-family: var(--ff-b); margin-top: 1px; }
+
+/* ---- Material / End-type / Wind-direction row ---- */
+.calc-extra {
+  padding: 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+  gap: 14px;
+  align-items: start;
+}
+.cextra-label {
+  font-size: 11px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); margin-bottom: 6px;
+}
+.cextra-select {
+  width: 100%; padding: 9px 10px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 12px; font-family: var(--ff-b); color: #111;
+  background: var(--white); outline: none;
+  transition: border var(--tr);
+}
+.cextra-select:focus { border-color: var(--teal); }
+
+/* End-type & wind-direction toggle buttons */
+.end-btns, .wind-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+.end-btn, .wind-btn {
+  padding: 7px 11px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-family: var(--ff-a); font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all var(--tr);
+  background: var(--white); color: #444;
+}
+.end-btn.active, .wind-btn.active               { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.end-btn:not(.active):hover, .wind-btn:not(.active):hover { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* ---- Name & Mobile fields (grey strip) ---- */
+.calc-user-row {
+  background: #f5f8fa;
+  border-top: 1px solid #d8e8ef;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.cuf-label { font-size: 11px; font-weight: 600; color: #555; font-family: var(--ff-b); margin-bottom: 5px; }
+.cuf-label .req { color: #e74c3c; }
+.cuf-input {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 14px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cuf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cuf-input.err   { border-color: #e74c3c; }
+.cuf-error       { font-size: 11px; color: #e74c3c; margin-top: 3px; display: none; }
+.cuf-error.show  { display: block; }
+
+/* ---- Calculate / Reset buttons ---- */
+.calc-actions {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px 20px;
+  justify-content: center;
+}
+.btn-calc-go {
+  flex: 1.5;
+  background: #5a9e2f; border: none; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--white); cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-go:hover   { background: #4a8422; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(90,158,47,0.35); }
+.btn-calc-go:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+.btn-calc-reset {
+  flex: 0.8;
+  background: transparent; border: 1.5px solid #c8d8e0; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  color: #666; cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-reset:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-pale); }
+
+/* ---- Result display panel (FIXED: outside overflow, always visible) ---- */
+.calc-result-wrap {
+  padding: 0 20px 20px;
+  /* This wrapper lives INSIDE .calc-card but after the actions */
+}
+.calc-result {
+  display: none; /* JS adds .show to reveal */
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: center;
+  animation: fadeUp 0.35s ease both;
+}
+.calc-result.show { display: block; }
+
+.result-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+.result-val { font-family: var(--ff-d); font-size: 2.4rem; font-weight: 900; color: var(--white); line-height: 1; }
+.result-sub { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px; }
+
+/* Status message below result */
+.calc-status {
+  display: none;
+  margin: 8px 20px 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-family: var(--ff-a);
+}
+.calc-status.show { display: block; }
+.calc-status.ok   { background: rgba(39,174,96,0.12); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.calc-status.ng   { background: rgba(231,76,60,0.10); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 6. PRODUCTS + MODAL ===== */
+/* ============================= */
+#products { background: var(--navy); padding: 90px 0; }
+
+/* Section header with "full catalogue" link */
+.prod-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Category filter tabs row */
+.cat-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.cat-tab {
+  font-family: var(--ff-a); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border);
+  color: var(--grey); cursor: pointer;
+  background: none;
+  transition: all var(--tr);
+}
+.cat-tab:hover          { border-color: rgba(240,165,0,0.4); color: var(--accent); }
+.cat-tab.active         { background: var(--accent); border-color: var(--accent); color: var(--navy); }
+
+/* Products grid */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Single product card */
+.prod-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--tr);
+}
+.prod-card:hover { transform: translateY(-5px); border-color: rgba(240,165,0,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+
+/* Image wrapper */
+.prod-img       { position: relative; height: 180px; overflow: hidden; background: var(--steel); }
+.prod-img img   { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.prod-card:hover .prod-img img { transform: scale(1.07); }
+
+/* Category badge on image */
+.prod-cat-badge {
+  position: absolute; bottom: 8px; left: 8px;
+  background: rgba(13,92,122,0.88); color: var(--white);
+  font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+}
+
+/* Card text body */
+.prod-body   { padding: 14px; }
+.prod-name   { font-family: var(--ff-d); font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 8px; }
+.prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.prod-enquire { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+.prod-view    { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--highlight); }
+
+/* Skeleton loader card */
+.skel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.skel-img { height: 180px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; }
+.skel-body { padding: 14px; }
+.skel-line { height: 12px; border-radius: 4px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; margin-bottom: 8px; }
+.skel-line.sh { width: 55%; }
+
+/* ---- Product Detail Modal ---- */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%; max-width: 700px;
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: rgba(255,255,255,0.1); border: none;
+  color: var(--white); font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr); z-index: 1;
+}
+.modal-close:hover { background: rgba(255,255,255,0.22); }
+.modal-img         { width: 100%; height: 260px; object-fit: cover; border-radius: 12px 12px 0 0; }
+.modal-body        { padding: 26px; }
+.modal-cat         { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+.modal-title       { font-family: var(--ff-d); font-size: 1.8rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.modal-desc        { font-size: 14px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.modal-specs       { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+.modal-spec        { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
+.modal-spec-label  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 3px; }
+.modal-spec-val    { font-size: 13px; color: var(--offwhite); font-weight: 500; }
+.modal-actions     { display: flex; gap: 12px; flex-wrap: wrap; }
+.modal-actions .btn { flex: 1; justify-content: center; }
+
+
+/* ============================= */
+/* ===== 7. TESTIMONIALS ===== */
+/* ============================= */
+#testimonials {
+  background: var(--navy-mid);
+  padding: 90px 0;
+  position: relative;
+}
+#testimonials::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+}
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 48px; }
+.testi-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px; transition: all var(--tr); }
+.testi-card:hover { border-color: rgba(59,139,255,0.3); transform: translateY(-4px); }
+.testi-stars  { color: var(--accent); font-size: 13px; margin-bottom: 10px; }
+.testi-q      { font-family: Georgia, serif; font-size: 3.5rem; line-height: 0.5; color: var(--accent); opacity: 0.45; margin-bottom: 14px; }
+.testi-txt    { font-size: 13.5px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.testi-author { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.testi-av     { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--ff-d); font-weight: 800; font-size: 0.95rem; color: var(--navy); flex-shrink: 0; }
+.testi-name   { font-family: var(--ff-a); font-weight: 600; font-size: 14px; color: var(--white); }
+.testi-role   { font-size: 12px; color: var(--grey); margin-top: 2px; }
+
+
+/* ============================= */
+/* ===== 8. CONTACT ===== */
+/* ============================= */
+#contact { background: var(--navy); padding: 90px 0; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+.contact-info { margin-top: 28px; }
+.cinfo-item  { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.cinfo-icon  { width: 44px; height: 44px; background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.2); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.cinfo-lbl   { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 2px; }
+.cinfo-val   { font-size: 14px; color: var(--offwhite); }
+.contact-form-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 36px; backdrop-filter: blur(10px); }
+.cform-title  { font-family: var(--ff-d); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+.cform-status { display: none; margin-top: 12px; padding: 10px 14px; border-radius: 7px; font-size: 13px; font-family: var(--ff-a); }
+.cform-status.show { display: block; }
+.cform-status.ok   { background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.cform-status.ng   { background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 9. FOOTER ===== */
+/* ============================= */
+footer {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--border);
+  padding: 44px 0 24px;
+}
+.footer-inner  { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.footer-copy   { font-size: 12px; color: var(--grey); text-align: center; }
+.footer-links  { display: flex; gap: 18px; }
+.footer-links a { font-family: var(--ff-a); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey); text-decoration: none; transition: color var(--tr); }
+.footer-links a:hover { color: var(--accent); }
+
+
+/* ============================= */
+/* ===== 10. MOBILE BOTTOM NAV ===== */
+/* ============================= */
+.bnav {
+  display: none; /* shown via media query on mobile */
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(10,15,30,0.97);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 6px 0 env(safe-area-inset-bottom, 6px);
+}
+.bnav-inner { display: flex; justify-content: space-around; }
+.bnav-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  color: var(--grey); background: none; border: none;
+  padding: 6px 12px; border-radius: 8px;
+  cursor: pointer; font-family: inherit;
+  transition: color var(--tr);
+}
+.bnav-btn.active, .bnav-btn:hover { color: var(--accent); }
+.bnav-icon { font-size: 19px; }
+.bnav-lbl  { font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+
+/* ============================= */
+/* ===== 11. KEYFRAME ANIMATIONS ===== */
+/* ============================= */
+@keyframes fadeUp   { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse    { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+@keyframes shimmer  { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes spin     { to { transform: rotate(360deg); } }
+@keyframes modalIn  { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+
+/* ============================= */
+/* ===== 12. RESPONSIVE ===== */
+/* ============================= */
+
+/* ---- Tablet ---- */
+@media (max-width: 1024px) {
+  .calc-layout { grid-template-columns: 1fr; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra  { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  nav          { display: none; }
+  .hamburger   { display: flex; }
+  /* Show fixed bottom nav */
+  .bnav        { display: block; }
+  /* Hero adjustments */
+  .hero-spring { display: none; }
+  .hero-stats  { gap: 16px; }
+  /* Layout stacking */
+  .contact-layout { grid-template-columns: 1fr; }
+  .prod-header    { flex-direction: column; align-items: flex-start; }
+  /* Calculator */
+  .calc-params  { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra   { grid-template-columns: 1fr; }
+  .calc-user-row { grid-template-columns: 1fr; }
+  /* Modal specs */
+  .modal-specs { grid-template-columns: 1fr; }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 480px) {
+  .hero-btns   { flex-direction: column; }
+  .testi-grid  { grid-template-columns: 1fr; }
+  .calc-tabs   { flex-direction: column; }
+  .calc-actions { flex-direction: column; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-tabs-meta { flex-direction: column; }
+}
+
+
+/* ============================================================
+   SPRING CALCULATION REPORT STYLES
+   (appended to styles.css)
+   ============================================================ */
+
+/* Result panel — overridden to fit full report */
+.calc-result {
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeUp 0.4s ease both;
+}
+.calc-result.show { display: block; }
+
+/* ---- Report card container ---- */
+.rpt-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--ff-b);
+  color: #111;
+}
+
+/* ---- Report header strip ---- */
+.rpt-header {
+  background: var(--teal);
+  padding: 14px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.rpt-tag {
+  font-family: var(--ff-d);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.rpt-customer {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+.rpt-header-r {
+  text-align: right;
+}
+.rpt-date {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2px;
+}
+.rpt-brand {
+  font-family: var(--ff-d);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* ---- 3 hero metric boxes ---- */
+.rpt-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f0f7fa;
+  border-bottom: 2px solid #d0e8f0;
+}
+.rpt-hero-item {
+  padding: 14px 16px;
+  text-align: center;
+  border-right: 1px solid #d0e8f0;
+}
+.rpt-hero-item:last-child { border-right: none; }
+.rpt-hero-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 4px;
+}
+.rpt-hero-val {
+  font-family: var(--ff-d);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+}
+
+/* ---- Two-column layout inside report ---- */
+.rpt-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #e0ecf0;
+}
+
+/* ---- Each section block ---- */
+.rpt-section {
+  padding: 14px 18px;
+  border-right: 1px solid #e0ecf0;
+}
+.rpt-section:last-child { border-right: none; }
+.rpt-table-section {
+  border-right: none;
+  border-top: 1px solid #e0ecf0;
+}
+
+/* Section heading */
+.rpt-sec-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #d0e8f0;
+}
+
+/* Each data row (label: value) */
+.rpt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f4f6;
+  font-size: 12px;
+  gap: 8px;
+}
+.rpt-row:last-child { border-bottom: none; }
+.rpt-lbl {
+  color: #555;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.rpt-val {
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+}
+/* Highlighted row (stress) */
+.rpt-hi .rpt-val { color: #c0392b; }
+.rpt-hi .rpt-lbl { color: #333; }
+
+/* ---- Load vs travel table ---- */
+.rpt-table-wrap { overflow-x: auto; }
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 300px;
+}
+.rpt-table thead tr {
+  background: var(--teal);
+  color: var(--white);
+}
+.rpt-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-family: var(--ff-a);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.rpt-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #e8f0f4;
+  color: #222;
+}
+.rpt-table tbody tr:nth-child(even) { background: #f5fafc; }
+.rpt-table tbody tr:hover { background: #e8f4fb; }
+
+/* ---- Disclaimer note ---- */
+.rpt-note {
+  padding: 10px 18px;
+  background: #fff8e1;
+  border-top: 1px solid #ffe082;
+  font-size: 11px;
+  color: #7a5c00;
+  line-height: 1.6;
+}
+
+/* ---- Responsive: stack columns on small screens ---- */
+@media (max-width: 600px) {
+  .rpt-cols         { grid-template-columns: 1fr; }
+  .rpt-section      { border-right: none; border-bottom: 1px solid #e0ecf0; }
+  .rpt-hero         { grid-template-columns: 1fr; }
+  .rpt-hero-item    { border-right: none; border-bottom: 1px solid #d0e8f0; }
+  .rpt-hero-val     { font-size: 1.1rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Gurudatta Trading Co.">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai, India</span>
+      </a>
+      <nav id="desk-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="calculator.html" class="nav-link">Calculator</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        
+      </nav>
+      <button class="hamburger" id="hbtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mob-drawer" id="mob-drawer" aria-hidden="true">
+      <a href="index.html" class="mdlink">Home</a>
+      <a href="calculator.html" class="mdlink">Calculator</a>
+      <a href="products.html" class="mdlink">Products</a>
+      <a href="reviews.html" class="mdlink">Reviews</a>
+      <a href="contact.html" class="mdlink">Contact</a>
+      
+    </div>
+  </div>
+</header>
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bnav" aria-label="Mobile bottom navigation">
+  <div class="bnav-inner">
+    <button class="bnav-btn" onclick="location.href='index.html'" aria-label="Home"><span class="bnav-icon">🏠</span><span class="bnav-lbl">Home</span></button>
+    <button class="bnav-btn" onclick="location.href='calculator.html'" aria-label="Calculator"><span class="bnav-icon">⚙️</span><span class="bnav-lbl">Calculator</span></button>
+    <button class="bnav-btn active" onclick="location.href='products.html'" aria-label="Products"><span class="bnav-icon">🔩</span><span class="bnav-lbl">Products</span></button>
+    <button class="bnav-btn" onclick="location.href='reviews.html'" aria-label="Reviews"><span class="bnav-icon">⭐</span><span class="bnav-lbl">Reviews</span></button>
+    <button class="bnav-btn" onclick="location.href='contact.html'" aria-label="Contact"><span class="bnav-icon">📞</span><span class="bnav-lbl">Contact</span></button>
+    
+  </div>
+</nav>
+
+
+<div style="padding-top:66px;"></div>
+<div style="background:var(--navy-mid);padding:40px 0 16px;">
+  <div class="container">
+    <span class="sec-label">Our Catalogue</span>
+    <h1 class="sec-title" style="font-size:clamp(1.8rem,4vw,2.6rem);">All Products</h1>
+    <p class="sec-sub">100+ spring products — click any card to view full details and enquire.</p>
+  </div>
+</div>
+<section id="products" aria-label="Product catalogue">
+  <div class="container">
+    <div class="prod-header">
+      <div>
+        <span class="sec-label">Catalogue</span>
+        <h2 class="sec-title">Our Products</h2>
+        <p class="sec-sub">Click any product to view full details and send an enquiry.</p>
+      </div>
+      <a href="https://www.gurudattatradingco.in/products.htm" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Full Catalogue →</a>
+    </div>
+    <!-- Category tabs (JS renders these) -->
+    <div class="cat-tabs" id="cat-tabs" role="tablist" aria-label="Filter by category"></div>
+    <!-- Product cards (JS renders these) -->
+    <div class="prod-grid" id="prod-grid" aria-label="Product cards"></div>
+  </div>
+</section>
+
+<!-- Product detail modal -->
+<div class="modal-overlay" id="prod-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn" aria-label="Close">✕</button>
+    <img class="modal-img" id="modal-img" src="" alt=""/>
+    <div class="modal-body">
+      <div class="modal-cat"   id="modal-cat"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <p   class="modal-desc"  id="modal-desc"></p>
+      <div class="modal-specs" id="modal-specs"></div>
+      <div class="modal-actions">
+        <a href="#contact" class="btn btn-primary"  id="modal-enquire-btn">📞 Enquire Now</a>
+        <a href="#"        class="btn btn-outline"  id="modal-source-btn" target="_blank" rel="noopener noreferrer">View on Source →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product detail modal -->
+<div class="modal-overlay" id="prod-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn" aria-label="Close">✕</button>
+    <img class="modal-img" id="modal-img" src="" alt=""/>
+    <div class="modal-body">
+      <div class="modal-cat"   id="modal-cat"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <p   class="modal-desc"  id="modal-desc"></p>
+      <div class="modal-specs" id="modal-specs"></div>
+      <div class="modal-actions">
+        <a href="contact.html" class="btn btn-primary" id="modal-enquire-btn">📞 Enquire Now</a>
+        <a href="#" class="btn btn-outline" id="modal-source-btn" target="_blank" rel="noopener noreferrer">View on Source →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai</span>
+      </div>
+      <p class="footer-copy">© 2025 Gurudatta Trading Co. All rights reserved.<br>Mild Steel Springs Manufacturer &amp; Supplier, Mumbai, India.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="products.html">Products</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+/* ─── COMMON: runs on every page ─────────────────────────── */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9r26eUhv3lT-A-VvXmpCZIA-NS5VzOxNexrJOie1tNN__SyfNPw_72DDCnzOzWO0W/exec';
+
+/* Header scroll */
+const siteHeader = document.getElementById('site-header');
+if (siteHeader) {
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+
+/* Hamburger */
+const hbtn = document.getElementById('hbtn');
+const mobDrawer = document.getElementById('mob-drawer');
+if (hbtn && mobDrawer) {
+  hbtn.addEventListener('click', () => {
+    const open = mobDrawer.classList.toggle('open');
+    hbtn.setAttribute('aria-expanded', open);
+    mobDrawer.setAttribute('aria-hidden', !open);
+  });
+  document.querySelectorAll('.mdlink').forEach(l => l.addEventListener('click', () => {
+    mobDrawer.classList.remove('open');
+    hbtn.setAttribute('aria-expanded', false);
+  }));
+}
+
+/* Smooth scroll for any anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+/* ============================================================
+   GURUDATTA TRADING CO. — script.js
+   Sections:
+     1.  Config & Constants
+     2.  Header scroll + active nav
+     3.  Hamburger menu
+     4.  Mobile bottom nav
+     5.  Calculator — state & helpers
+     6.  Calculator — tab / unit / badge / button events
+     7.  Calculator — compute & submit
+     8.  Products — data & render
+     9.  Products — category filter
+    10.  Product detail modal
+    11.  Contact form
+    12.  Smooth scroll
+   ============================================================ */
+
+/* ===================================================
+   1. CONFIG & CONSTANTS
+   =================================================== */
+
+/* Google Apps Script Web App URL */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9r26eUhv3lT-A-VvXmpCZIA-NS5VzOxNexrJOie1tNN__SyfNPw_72DDCnzOzWO0W/exec';
+
+/* Shear modulus (MPa) per material — used in spring rate formula */
+const G_MAP = {
+  'Music Wire ASTM A228': 81500,
+  'Hard Drawn Wire ASTM A227': 80000,
+  'Chrome Vanadium ASTM A232': 80000,
+  'Stainless Steel ASTM A313': 68900,
+  'Phosphor Bronze ASTM B197': 41370,
+  'Mild Steel IS 4454': 79300,
+};
+
+/* Inactive coils by end type (used to derive active coils) */
+const INACTIVE_COILS = { C: 2, CG: 2, DC: 2, O: 0 };
+
+
+/* ===================================================
+   2. HEADER SCROLL + ACTIVE NAV LINK
+   =================================================== */
+const siteHeader = document.getElementById('site-header');
+const desktopNavLinks = document.querySelectorAll('.nav-link');
+const allSections     = document.querySelectorAll('section[id]');
+
+/* Add .scrolled to header when page is scrolled */
+window.addEventListener('scroll', () => {
+  siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  highlightActiveSection();
+}, { passive: true });
+
+/* Highlight the nav link whose section is currently in view */
+function highlightActiveSection() {
+  let currentId = '';
+  allSections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 90) {
+      currentId = section.id;
+    }
+  });
+
+  /* Update desktop nav */
+  desktopNavLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+  });
+
+  /* Update mobile bottom nav */
+  document.querySelectorAll('.bnav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.sec === '#' + currentId);
+  });
+}
+
+/* Run once on page load to set initial state */
+highlightActiveSection();
+
+
+/* ===================================================
+   3. HAMBURGER MENU TOGGLE
+   =================================================== */
+const hamburgerBtn = document.getElementById('hbtn');
+const mobileDrawer = document.getElementById('mob-drawer');
+
+hamburgerBtn.addEventListener('click', () => {
+  const isOpen = mobileDrawer.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  mobileDrawer.setAttribute('aria-hidden', !isOpen);
+});
+
+/* Close the drawer when any link inside it is clicked */
+document.querySelectorAll('.mdlink').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileDrawer.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', false);
+    mobileDrawer.setAttribute('aria-hidden', true);
+  });
+});
+
+
+/* ===================================================
+   4. MOBILE BOTTOM NAV — smooth scroll to section
+   =================================================== */
+document.querySelectorAll('.bnav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.querySelector(btn.dataset.sec);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+/* ===================================================
+   5. CALCULATOR — STATE & HELPERS
+   =================================================== */
+
+/* Mutable calculator state */
+const calcState = {
+  springType: 'compression',   // compression | extension | torsion
+  unit:       'english',       // english | metric
+  endType:    'C',             // C | CG | DC | O
+  windDir:    'RH',            // RH | LH
+  fieldModes: { wd: 'exact', od: 'exact', fl: 'exact', tc: 'exact' }, // exact | range
+};
+
+/* --------------------------------------------------
+   Helper: update the unit labels (IN vs mm) shown
+   next to each parameter input
+   -------------------------------------------------- */
+function updateUnitLabels() {
+  const u = calcState.unit === 'english' ? 'IN' : 'mm';
+  // Wire diameter
+  const wdU = document.getElementById('lbl-wd');
+  if (wdU) wdU.textContent = u;
+  // Outer diameter
+  const odU = document.getElementById('lbl-od');
+  if (odU) odU.textContent = u;
+  // Free length
+  const flU = document.getElementById('lbl-fl');
+  if (flU) flU.textContent = u;
+}
+updateUnitLabels(); /* run immediately on page load */
+
+/* --------------------------------------------------
+   Helper: toggle Range mode for a field
+   Shows / hides the "max" input and dash separator
+   -------------------------------------------------- */
+function applyFieldMode(field, mode) {
+  calcState.fieldModes[field] = mode;
+  const dash = document.getElementById(field + '-dash');
+  const maxInput = document.getElementById(field + '-max');
+  if (dash && maxInput) {
+    const isRange = mode === 'range';
+    dash.style.display     = isRange ? 'inline' : 'none';
+    maxInput.style.display = isRange ? 'block'  : 'none';
+    if (!isRange) maxInput.value = ''; /* clear max when switching back */
+  }
+}
+
+
+/* --------------------------------------------------
+   Helper: hide the result report panel
+   -------------------------------------------------- */
+function hideResult() {
+  const el = document.getElementById('calc-result');
+  el.classList.remove('show');
+  el.innerHTML = ''; /* clear old report */
+  hideCalcStatus();
+}
+
+/* --------------------------------------------------
+   Helper: show / hide the Google Sheets status bar
+   -------------------------------------------------- */
+function showCalcStatus(message, type) {
+  const s   = document.getElementById('calc-status');
+  s.textContent = message;
+  s.className   = 'calc-status show ' + type;
+}
+function hideCalcStatus() {
+  const s = document.getElementById('calc-status');
+  s.className   = 'calc-status';
+  s.textContent = '';
+}
+
+/* --------------------------------------------------
+   Validate Name & Mobile
+   -------------------------------------------------- */
+function validateUserFields() {
+  let ok = true;
+  const nameEl = document.getElementById('cuf-name');
+  const mobEl  = document.getElementById('cuf-mobile');
+  const nErr   = document.getElementById('err-cuf-name');
+  const mErr   = document.getElementById('err-cuf-mobile');
+  if (nameEl.value.trim().length < 2) {
+    nameEl.classList.add('err'); nErr.classList.add('show'); ok = false;
+  } else { nameEl.classList.remove('err'); nErr.classList.remove('show'); }
+  if (!/^\d{10}$/.test(mobEl.value.trim())) {
+    mobEl.classList.add('err'); mErr.classList.add('show'); ok = false;
+  } else { mobEl.classList.remove('err'); mErr.classList.remove('show'); }
+  return ok;
+}
+
+/* --------------------------------------------------
+   Validate numeric parameter fields
+   -------------------------------------------------- */
+function validateParamFields() {
+  let ok = true;
+  ['wd-min', 'od-min', 'tc-min'].forEach(id => {
+    const el  = document.getElementById(id);
+    const val = parseFloat(el.value);
+    if (isNaN(val) || val <= 0) { el.classList.add('err'); ok = false; }
+    else                        { el.classList.remove('err'); }
+  });
+  return ok;
+}
+
+/* --------------------------------------------------
+   Unit conversion helpers
+   -------------------------------------------------- */
+function toMM(v)  { return calcState.unit === 'english' ? v * 25.4 : v; }
+function fmt(n, d) { return Number(n).toFixed(d ?? 4); }
+
+/* --------------------------------------------------
+   ╔═══════════════════════════════════════════════╗
+   ║    SPRING ENGINEERING CALCULATION ENGINE      ║
+   ║    Formulas: Wahl's Mechanical Springs (1963) ║
+   ╚═══════════════════════════════════════════════╝
+   -------------------------------------------------- */
+function computeAllResults(p) {
+  const { d, OD, freeLength, totalCoils, G, endType, springType, unit, materialName, windDir } = p;
+
+  /* Derived geometry */
+  const ID    = OD - 2 * d;   /* Inner diameter */
+  const D     = OD - d;       /* Mean coil diameter */
+  const C     = D / d;        /* Spring index */
+
+  /* Active coils */
+  const inact = INACTIVE_COILS[endType] ?? 2;
+  const Na    = Math.max(totalCoils - inact, 0.5);
+
+  if (d <= 0 || D <= 0 || Na <= 0 || C < 1) return null;
+
+  /* Spring rate  k = G·d⁴ / (8·D³·Na)  [N/mm] */
+  const k = (G * Math.pow(d, 4)) / (8 * Math.pow(D, 3) * Na);
+
+  /* Solid height
+     C / CG / DC (closed ends): Ls = (N+1)·d
+     O (open ends):             Ls = N·d          */
+  const Ls = (endType === 'O') ? totalCoils * d : (totalCoils + 1) * d;
+
+  /* Maximum safe travel and load */
+  const maxTravel = Math.max(freeLength - Ls, 0);
+  const maxLoad   = k * maxTravel;   /* N */
+
+  /* Wahl stress correction  Kw = (4C-1)/(4C-4) + 0.615/C */
+  const Kw = ((4*C - 1) / (4*C - 4)) + (0.615 / C);
+
+  /* Max shear stress at solid  τ = Kw·8·F·D / (π·d³)  [MPa] */
+  const tau = Kw * (8 * maxLoad * D) / (Math.PI * Math.pow(d, 3));
+
+  /* Coil pitch */
+  const pitch = totalCoils > 1
+    ? (freeLength - (endType === 'O' ? 0 : 2*d)) / (totalCoils - 1)
+    : d;
+
+  /* Wire length  L_wire = π·D·N */
+  const wireLen = Math.PI * D * totalCoils;
+
+  /* Estimated weight (steel 7.85 g/cm³) */
+  const vol_mm3 = (Math.PI / 4) * d * d * wireLen;
+  const mass_g  = vol_mm3 * 7.85e-6 * 1000;
+
+  /* ── Display formatters ── */
+  const en = unit === 'english';
+  const dL = mm   => en ? fmt(mm / 25.4)  + ' IN'    : fmt(mm, 3)  + ' mm';
+  const dR = r    => en ? fmt(r * 5.710)  + ' lb/in' : fmt(r, 4)   + ' N/mm';
+  const dF = n    => en ? fmt(n * 0.2248) + ' lb'    : fmt(n, 3)   + ' N';
+  const dS = mpa  => fmt(mpa, 2) + ' MPa';
+
+  /* Load table rows at 0 / 25 / 50 / 75 / 100 % of max travel */
+  const loadTable = [0, 0.25, 0.50, 0.75, 1.0].map(pct => ({
+    pct:    Math.round(pct * 100) + '%',
+    travel: dL(pct * maxTravel),
+    height: dL(freeLength - pct * maxTravel),
+    load:   dF(k * pct * maxTravel),
+  }));
+
+  return {
+    /* Input echo */
+    wireDia:      dL(d),
+    outerDia:     dL(OD),
+    innerDia:     dL(ID),
+    meanDia:      dL(D),
+    freeLen:      dL(freeLength),
+    solidHeight:  dL(Ls),
+    pitch:        dL(pitch),
+    wireLength:   dL(wireLen),
+    weight:       fmt(mass_g, 3) + ' g',
+    totalCoils:   fmt(totalCoils, 1),
+    activeCoils:  fmt(Na, 1),
+    inactiveCoils:fmt(inact, 0),
+    endType, windDir,
+    material:     materialName,
+    springType,
+    /* Results */
+    springRate:   dR(k),
+    maxTravel:    dL(maxTravel),
+    maxLoad:      dF(maxLoad),
+    springIndex:  fmt(C, 2),
+    wahlFactor:   fmt(Kw, 4),
+    maxStress:    dS(tau),
+    loadTable,
+    /* Raw (for Sheets) */
+    raw: { k, Ls, maxTravel, maxLoad, C, Kw, tau, wireLen, mass_g },
+  };
+}
+
+/* --------------------------------------------------
+   buildReportHTML()
+   Renders a professional spring spec-sheet report.
+   -------------------------------------------------- */
+function buildReportHTML(r, name, mobile) {
+  const typeLabel = r.springType.charAt(0).toUpperCase() + r.springType.slice(1);
+
+  const row = (lbl, val, hi = false) =>
+    `<div class="rpt-row${hi ? ' rpt-hi' : ''}">
+       <span class="rpt-lbl">${lbl}</span>
+       <span class="rpt-val">${val}</span>
+     </div>`;
+
+  const trow = t =>
+    `<tr>
+       <td>${t.pct}</td>
+       <td>${t.travel}</td>
+       <td>${t.height}</td>
+       <td>${t.load}</td>
+     </tr>`;
+
+  return `
+<div class="rpt-card" id="spring-report">
+
+  <!-- Report heading strip -->
+  <div class="rpt-header">
+    <div>
+      <div class="rpt-tag">${typeLabel} Spring — Calculation Report</div>
+      <div class="rpt-customer"><span>👤 ${name}</span><span>📞 ${mobile}</span></div>
+    </div>
+    <div class="rpt-header-r">
+      <div class="rpt-date">${new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})}</div>
+      <div class="rpt-brand">GURUDATTA TRADING CO.</div>
+    </div>
+  </div>
+
+  <!-- 3 big hero numbers -->
+  <div class="rpt-hero">
+    <div class="rpt-hero-item">
+      <div class="rpt-hero-lbl">Spring Rate (k)</div>
+      <div class="rpt-hero-val">${r.springRate}</div>
+    </div>
+    <div class="rpt-hero-item">
+      <div class="rpt-hero-lbl">Max Safe Travel</div>
+      <div class="rpt-hero-val">${r.maxTravel}</div>
+    </div>
+    <div class="rpt-hero-item">
+      <div class="rpt-hero-lbl">Max Safe Load</div>
+      <div class="rpt-hero-val">${r.maxLoad}</div>
+    </div>
+  </div>
+
+  <!-- Two columns: Dimensions | Specifications -->
+  <div class="rpt-cols">
+    <div class="rpt-section">
+      <div class="rpt-sec-title">📐 Dimensions</div>
+      ${row('Wire Diameter (d)',        r.wireDia)}
+      ${row('Outer Diameter (OD)',      r.outerDia)}
+      ${row('Inner Diameter (ID)',      r.innerDia)}
+      ${row('Mean Coil Diameter (D)',   r.meanDia)}
+      ${row('Free Length (L₀)',         r.freeLen)}
+      ${row('Solid Height (Ls)',        r.solidHeight)}
+      ${row('Pitch',                    r.pitch)}
+      ${row('Total Wire Length',        r.wireLength)}
+      ${row('Estimated Weight',         r.weight)}
+    </div>
+    <div class="rpt-section">
+      <div class="rpt-sec-title">⚙️ Specifications</div>
+      ${row('Total Coils (N)',           r.totalCoils)}
+      ${row('Active Coils (Na)',         r.activeCoils)}
+      ${row('Inactive Coils',            r.inactiveCoils)}
+      ${row('Spring Index (C = D/d)',    r.springIndex)}
+      ${row('Wahl Correction Factor',    r.wahlFactor)}
+      ${row('Max Shear Stress (τ)',      r.maxStress, true)}
+      ${row('End Type',                  r.endType)}
+      ${row('Wind Direction',            r.windDir)}
+      ${row('Material',                  r.material)}
+    </div>
+  </div>
+
+  <!-- Load vs Travel table -->
+  <div class="rpt-section rpt-table-section">
+    <div class="rpt-sec-title">📊 Load vs Travel Table</div>
+    <div class="rpt-table-wrap">
+      <table class="rpt-table">
+        <thead><tr><th>Travel %</th><th>Deflection</th><th>Loaded Height</th><th>Load</th></tr></thead>
+        <tbody>${r.loadTable.map(trow).join('')}</tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="rpt-note">
+    ⚠️ Theoretical estimates ±10%. Verify with a qualified engineer before manufacturing.
+    Contact <strong>Gurudatta Trading Co.</strong> for custom spring manufacturing — Mumbai.
+  </div>
+
+</div>`;
+}
+
+
+/* ===================================================
+   7. CALCULATOR — COMPUTE & SUBMIT
+   =================================================== */
+document.getElementById('calc-go-btn').addEventListener('click', async () => {
+
+  /* Clear previous */
+  hideResult();
+
+  /* Validate */
+  const userOk  = validateUserFields();
+  const paramOk = validateParamFields();
+  if (!userOk || !paramOk) {
+    showCalcStatus('⚠️ Please fill all required fields correctly before calculating.', 'ng');
+    return;
+  }
+
+  /* Read inputs */
+  const wdRaw = parseFloat(document.getElementById('wd-min').value);
+  const odRaw = parseFloat(document.getElementById('od-min').value);
+  const flRaw = parseFloat(document.getElementById('fl-min').value) || 0;
+  const tcRaw = parseFloat(document.getElementById('tc-min').value);
+  const mat   = document.getElementById('material-type').value;
+  const G     = G_MAP[mat] || 81000;
+  const name  = document.getElementById('cuf-name').value.trim();
+  const mob   = document.getElementById('cuf-mobile').value.trim();
+
+  /* Convert to mm */
+  const d_mm  = toMM(wdRaw);
+  const od_mm = toMM(odRaw);
+  const fl_mm = flRaw > 0 ? toMM(flRaw) : od_mm * 3; /* default FL if blank */
+
+  /* OD must be > wire dia */
+  if (od_mm <= d_mm) {
+    document.getElementById('od-min').classList.add('err');
+    showCalcStatus('⚠️ Outer Diameter must be greater than Wire Diameter.', 'ng');
+    return;
+  }
+
+  /* Compute full results */
+  const results = computeAllResults({
+    d: d_mm, OD: od_mm, freeLength: fl_mm, totalCoils: tcRaw,
+    G, endType: calcState.endType, springType: calcState.springType,
+    unit: calcState.unit, materialName: mat, windDir: calcState.windDir,
+  });
+
+  if (!results) {
+    showCalcStatus('⚠️ Calculation failed. Check your input values.', 'ng');
+    return;
+  }
+
+  /* Render report */
+  const resultEl = document.getElementById('calc-result');
+  resultEl.innerHTML = buildReportHTML(results, name, mob);
+  resultEl.classList.add('show');
+  setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+
+  /* Save to Google Sheets */
+  const goBtn = document.getElementById('calc-go-btn');
+  goBtn.disabled  = true;
+  goBtn.innerHTML = '<span class="spinner"></span> Saving…';
+
+  const payload = {
+    action: 'calculator',
+    /* Customer */
+    name, mobile: mob,
+    /* Spring inputs */
+    springType:      calcState.springType,
+    unit:            calcState.unit,
+    wireDiameter:    wdRaw,
+    outerDiameter:   odRaw,
+    freeLength:      flRaw,
+    totalCoils:      tcRaw,
+    material:        mat,
+    endType:         calcState.endType,
+    windDir:         calcState.windDir,
+    /* Calculated outputs */
+    springRate:      results.springRate,
+    solidHeight:     results.solidHeight,
+    maxTravel:       results.maxTravel,
+    maxLoad:         results.maxLoad,
+    springIndex:     results.springIndex,
+    wahlFactor:      results.wahlFactor,
+    maxShearStress:  results.maxStress,
+    totalWireLength: results.wireLength,
+    estimatedWeight: results.weight,
+    timestamp:       new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+  };
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST', headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload), mode: 'no-cors',
+    });
+    showCalcStatus('✅ Report saved! Our team will contact you shortly.', 'ok');
+  } catch (err) {
+    showCalcStatus('⚠️ Report shown but could not save — check your connection.', 'ng');
+    console.error('Calc save error:', err);
+  } finally {
+    goBtn.disabled  = false;
+    goBtn.innerHTML = 'Calculate';
+  }
+});
+
+
+/* ===================================================
+   8. PRODUCTS — DATA
+   =================================================== */
+
+/* Full product list sourced from gurudattatradingco.in/products.htm */
+const ALL_PRODUCTS = [
+  /* ---- Industrial Springs ---- */
+  { name:'Automobile Coil Springs',       cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/automobile-coil-springs-1751712422-8182851.jpeg',              url:'https://www.gurudattatradingco.in/automobile-coil-springs.htm' },
+  { name:'Bike Clutch Springs',            cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/bike-clutch-springs-1751714933-8183005.jpeg',                  url:'https://www.gurudattatradingco.in/bike-clutch-springs.htm' },
+  { name:'Carbon Steel Die Springs',       cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/carbon-steel-die-springs-1751862359-8184447.jpeg',             url:'https://www.gurudattatradingco.in/carbon-steel-die-springs.htm' },
+  { name:'Cast Iron Springs',              cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/cast-iron-springs-1751863621-8184524.jpeg',                    url:'https://www.gurudattatradingco.in/cast-iron-springs.htm' },
+  { name:'Clock Springs',                  cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/clock-springs-1751697947-8181818.jpeg',                        url:'https://www.gurudattatradingco.in/clock-springs.htm' },
+  { name:'Conical Seal Springs',           cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/conical-seal-springs-1751862929-8184474.jpeg',                 url:'https://www.gurudattatradingco.in/conical-seal-springs.htm' },
+  { name:'Constant Force Springs',         cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/constant-force-springs-1751862448-8184451.jpeg',               url:'https://www.gurudattatradingco.in/constant-force-springs.htm' },
+  { name:'Custom Compression Springs',     cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/custom-compression-springs-1751863516-8184520.jpeg',           url:'https://www.gurudattatradingco.in/custom-compression-springs.htm' },
+  { name:'Custom Torsion Springs',         cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/custom-torsion-springs-1751700810-8182089.jpeg',               url:'https://www.gurudattatradingco.in/custom-torsion-springs.htm' },
+  { name:'Disc Springs',                   cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/disc-springs-1751698195-8181839.jpeg',                         url:'https://www.gurudattatradingco.in/disc-springs.htm' },
+  { name:'Heavy Duty Extension Springs',   cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/heavy-duty-extension-springs-1751705381-8182327.jpeg',         url:'https://www.gurudattatradingco.in/heavy-duty-extension-springs.htm' },
+  { name:'Helical Compression Springs',    cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/helical-compression-springs-1751697792-8181805.jpeg',          url:'https://www.gurudattatradingco.in/helical-compression-springs.htm' },
+  { name:'Helical Tension Springs',        cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/helical-tension-springs-1751862860-8184473.jpeg',              url:'https://www.gurudattatradingco.in/helical-tension-springs.htm' },
+  { name:'Hook Extension Springs',         cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/hook-extension-springs-1751863424-8184515.jpeg',               url:'https://www.gurudattatradingco.in/hook-extension-springs.htm' },
+  { name:'Hot Coiled Helical Springs',     cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/hot-coiled-helical-springs-1751862798-8184470.jpeg',           url:'https://www.gurudattatradingco.in/hot-coiled-helical-springs.htm' },
+  { name:'Inconel X750 Springs',           cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/inconel-x750-springs-1751698047-8181825.jpeg',                 url:'https://www.gurudattatradingco.in/inconel-x750-springs.htm' },
+  { name:'Jumping Trampoline Springs',     cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/jumping-trampoline-springs-1751862724-8184468.jpeg',           url:'https://www.gurudattatradingco.in/jumping-trampoline-springs.htm' },
+  { name:'Metal Coil Springs',             cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/metal-coil-springs-1751862293-8184445.jpeg',                   url:'https://www.gurudattatradingco.in/metal-coil-springs.htm' },
+  { name:'PB Springs',                     cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/pb-springs-1751700399-8182038.jpeg',                           url:'https://www.gurudattatradingco.in/pb-springs.htm' },
+  { name:'Pilling Machine Springs',        cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/pilling-machine-springs-1751863344-8184507.jpeg',              url:'https://www.gurudattatradingco.in/pilling-machine-springs.htm' },
+  { name:'Precise Compression Springs',    cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/precise-compression-springs-1751712477-8182856.jpeg',          url:'https://www.gurudattatradingco.in/precise-compression-springs.htm' },
+  { name:'Precise Torsion Springs',        cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/precise-torsion-spring-1751714747-8182995.jpeg',               url:'https://www.gurudattatradingco.in/precise-torsion-springs.htm' },
+  { name:'Precision Coil Springs',         cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/precision-coil-spring-1751714805-8183001.jpeg',                url:'https://www.gurudattatradingco.in/precision-coil-springs.htm' },
+  { name:'Pressure Plate Springs',         cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/pressure-plate-springs-1751713987-8182962.jpeg',               url:'https://www.gurudattatradingco.in/pressure-plate-springs.htm' },
+  { name:'Red Flat Springs',               cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/red-flat-springs-1751698256-8181845.jpeg',                     url:'https://www.gurudattatradingco.in/red-flat-springs.htm' },
+  { name:'Square Flat Springs',            cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/square-flat-springs-1751698142-8181833.jpeg',                  url:'https://www.gurudattatradingco.in/square-flat-springs.htm' },
+  { name:'Stone Crusher Springs',          cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stone-crusher-springs-1751714084-8182964.jpeg',                url:'https://www.gurudattatradingco.in/stone-crusher-springs.htm' },
+  { name:'Suspension Coil Springs',        cat:'Industrial Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/suspension-coil-springs-1751714871-8183003.jpeg',              url:'https://www.gurudattatradingco.in/suspension-coil-springs.htm' },
+  /* ---- Mild Steel Springs ---- */
+  { name:'120mm Mild Steel Springs',       cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/120mm-mild-steel-springs-1751862209-8184439.jpeg',             url:'https://www.gurudattatradingco.in/120mm-mild-steel-springs.htm' },
+  { name:'18mm Mild Steel Springs',        cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/18mm-mild-steel-springs-1751699118-8181927.jpeg',              url:'https://www.gurudattatradingco.in/18mm-mild-steel-springs.htm' },
+  { name:'4mm Mild Steel Springs',         cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/4mm-mild-steel-springs-1751704580-8182277.jpeg',               url:'https://www.gurudattatradingco.in/4mm-mild-steel-springs.htm' },
+  { name:'Black Mild Steel Springs',       cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/black-mild-steel-springs-1751698801-8181899.jpeg',             url:'https://www.gurudattatradingco.in/black-mild-steel-springs.htm' },
+  { name:'Mild Steel Compression Springs', cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-compression-springs-1751700014-8182009.jpeg',       url:'https://www.gurudattatradingco.in/mild-steel-compression-springs.htm' },
+  { name:'Mild Steel Connecting Springs',  cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-connecting-springs-1751705133-8182313.jpeg',        url:'https://www.gurudattatradingco.in/mild-steel-connecting-springs.htm' },
+  { name:'Mild Steel Double Springs',      cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-double-springs-1751706692-8182438.jpeg',            url:'https://www.gurudattatradingco.in/mild-steel-double-springs.htm' },
+  { name:'Mild Steel Extension Springs',   cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-extension-springs-1751705968-8182377.jpeg',         url:'https://www.gurudattatradingco.in/mild-steel-extension-springs.htm' },
+  { name:'Mild Steel Helical Springs',     cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-helical-springs-1751705470-8182331.jpeg',           url:'https://www.gurudattatradingco.in/mild-steel-helical-springs.htm' },
+  { name:'Mild Steel Polished Springs',    cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-polished-springs-1751700191-8182024.jpeg',          url:'https://www.gurudattatradingco.in/mild-steel-polished-springs.htm' },
+  { name:'Mild Steel Shocker Springs',     cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-shocker-springs-1751707004-8182454.jpeg',           url:'https://www.gurudattatradingco.in/mild-steel-shocker-springs.htm' },
+  { name:'Mild Steel Silver Springs',      cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-silver-springs-1751700120-8182017.jpeg',            url:'https://www.gurudattatradingco.in/mild-steel-silver-springs.htm' },
+  { name:'Mild Steel Support Springs',     cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-support-springs-1751701495-8182146.jpeg',           url:'https://www.gurudattatradingco.in/mild-steel-support-springs.htm' },
+  { name:'Mild Steel Torsion Springs',     cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-torsion-springs-1751699031-8181921.jpeg',           url:'https://www.gurudattatradingco.in/mild-steel-torsion-springs.htm' },
+  { name:'Red Mild Steel Springs',         cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/red-mild-steel-springs-1751698897-8181912.jpeg',               url:'https://www.gurudattatradingco.in/red-mild-steel-springs.htm' },
+  { name:'SS Polished Springs',            cat:'Mild Steel Springs', img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-polished-springs-1751701283-8182122.jpeg',     url:'https://www.gurudattatradingco.in/stainless-steel-polished-springs.htm' },
+  /* ---- Stainless Steel Springs ---- */
+  { name:'10mm SS Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/10mm-stainless-steel-springs-1751701044-8182110.jpeg',         url:'https://www.gurudattatradingco.in/10mm-stainless-steel-springs.htm' },
+  { name:'20mm SS Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/20mm-stainless-steel-springs-1751704368-8182249.jpeg',         url:'https://www.gurudattatradingco.in/20mm-stainless-steel-springs.htm' },
+  { name:'2mm SS Springs',                 cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/2mm-stainless-steel-springs-1751704651-8182284.jpeg',          url:'https://www.gurudattatradingco.in/2mm-stainless-steel-springs.htm' },
+  { name:'7mm SS Springs',                 cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/7mm-stainless-steel-springs-1751704430-8182262.jpeg',          url:'https://www.gurudattatradingco.in/7mm-stainless-steel-springs.htm' },
+  { name:'Double Coil SS Springs',         cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/60mm-stainless-steel-springs-1751706466-8182419.jpeg',         url:'https://www.gurudattatradingco.in/60mm-stainless-steel-springs.htm' },
+  { name:'SS Bike Brake Springs',          cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-bike-brake-springs-1751706143-8182388.jpeg',   url:'https://www.gurudattatradingco.in/stainless-steel-bike-brake-springs.htm' },
+  { name:'SS Coil Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-coil-springs-1751713922-8182953.jpeg',         url:'https://www.gurudattatradingco.in/stainless-steel-coil-springs.htm' },
+  { name:'SS Compression Springs',         cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-compression-springs-1751699510-8181974.jpeg',  url:'https://www.gurudattatradingco.in/stainless-steel-compression-springs.htm' },
+  { name:'SS Double Springs',              cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-double-springs-1751706589-8182429.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-double-springs.htm' },
+  { name:'SS Extension Springs',           cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-extension-springs-1751699390-8181953.jpeg',    url:'https://www.gurudattatradingco.in/stainless-steel-extension-springs.htm' },
+  { name:'SS Form Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-form-springs-1751706210-8182389.jpeg',         url:'https://www.gurudattatradingco.in/stainless-steel-form-springs.htm' },
+  { name:'SS Heavy Duty Springs',          cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-heavy-duty-springs-1751699574-8181979.jpeg',   url:'https://www.gurudattatradingco.in/stainless-steel-heavy-duty-springs.htm' },
+  { name:'SS High Tension Springs',        cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-high-tension-springs-1751705852-8182371.jpeg', url:'https://www.gurudattatradingco.in/stainless-steel-high-tension-springs.htm' },
+  { name:'SS Hot Coiled Springs',          cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-hot-coiled-springs-1751704505-8182268.jpeg',   url:'https://www.gurudattatradingco.in/stainless-steel-hot-coiled-springs.htm' },
+  { name:'SS Silver Springs',              cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-silver-springs-1751706055-8182384.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-silver-springs.htm' },
+  { name:'SS Single Springs',              cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-single-springs-1751705078-8182309.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-single-springs.htm' },
+  { name:'SS Spiral Springs',              cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-spiral-springs-1751705908-8182373.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-spiral-springs.htm' },
+  { name:'SS Springs (40mm)',              cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/40mm-stainless-steel-springs-1751707117-8182458.jpeg',         url:'https://www.gurudattatradingco.in/40mm-stainless-steel-springs.htm' },
+  { name:'SS Support Springs',             cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-support-springs-1751701617-8182160.jpeg',      url:'https://www.gurudattatradingco.in/stainless-steel-support-springs.htm' },
+  { name:'SS Torsion Springs',             cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-torsion-springs-1751699454-8181971.jpeg',      url:'https://www.gurudattatradingco.in/stainless-steel-torsion-springs.htm' },
+  { name:'SS Valve Springs',               cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-valve-springs-1751706763-8182440.jpeg',        url:'https://www.gurudattatradingco.in/stainless-steel-valve-springs.htm' },
+  { name:'SS Wave Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-wave-springs-1751705210-8182320.jpeg',         url:'https://www.gurudattatradingco.in/stainless-steel-wave-springs.htm' },
+  { name:'SS Wire Springs',                cat:'SS Springs',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-wire-springs-1751701545-8182151.jpeg',         url:'https://www.gurudattatradingco.in/stainless-steel-wire-springs.htm' },
+  /* ---- SS Hooks ---- */
+  { name:'SS C Hooks',                     cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-c-hooks-1751707903-8182514.jpeg',              url:'https://www.gurudattatradingco.in/stainless-steel-c-hooks.htm' },
+  { name:'SS Polished Hooks',              cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-polished-hooks-1751708064-8182528.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-polished-hooks.htm' },
+  { name:'SS S Hooks',                     cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-s-hooks-1751708178-8182540.jpeg',              url:'https://www.gurudattatradingco.in/stainless-steel-s-hooks.htm' },
+  { name:'SS Spring Hooks',                cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-spring-hooks-1751708231-8182551.jpeg',         url:'https://www.gurudattatradingco.in/stainless-steel-spring-hooks.htm' },
+  { name:'SS Triangle Hooks',              cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-triangle-hooks-1751708122-8182534.jpeg',       url:'https://www.gurudattatradingco.in/stainless-steel-triangle-hooks.htm' },
+  { name:'SS U Hooks',                     cat:'SS Hooks',           img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-u-hooks-1751707993-8182522.jpeg',              url:'https://www.gurudattatradingco.in/stainless-steel-u-hooks.htm' },
+  /* ---- Circlips & Pins ---- */
+  { name:'SS E-Type Circlips',             cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-e-type-circlips-1751710125-8182660.jpeg',      url:'https://www.gurudattatradingco.in/stainless-steel-e-type-circlips.htm' },
+  { name:'SS Internal Circlips',           cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-internal-circlips-1751709999-8182651.jpeg',    url:'https://www.gurudattatradingco.in/stainless-steel-internal-circlips.htm' },
+  { name:'SS Pillar Circlips',             cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-pillar-circlips-1751710316-8182672.jpeg',      url:'https://www.gurudattatradingco.in/stainless-steel-pillar-circlips.htm' },
+  { name:'SS Polished Circlips',           cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-polished-circlips-1751710197-8182663.jpeg',    url:'https://www.gurudattatradingco.in/stainless-steel-polished-circlips.htm' },
+  { name:'SS Cotter Pins',                 cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-cotter-pins-1751709723-8182634.jpeg',          url:'https://www.gurudattatradingco.in/stainless-steel-cotter-pins.htm' },
+  { name:'SS Grey R Pins',                 cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-grey-r-pins-1751712809-8182887.jpeg',          url:'https://www.gurudattatradingco.in/stainless-steel-grey-r-pins.htm' },
+  { name:'SS Polished R Pins',             cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-r-polished-pins-1751712740-8182881.jpeg',      url:'https://www.gurudattatradingco.in/stainless-steel-polished-r-pins.htm' },
+  { name:'SS Round Pins',                  cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-round-pins-1751713018-8182898.jpeg',           url:'https://www.gurudattatradingco.in/stainless-steel-round-pins.htm' },
+  { name:'SS Split Pins',                  cat:'Circlips & Pins',    img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-split-pins-1751712959-8182895.jpeg',           url:'https://www.gurudattatradingco.in/stainless-steel-split-pins.htm' },
+  /* ---- Wire Forms ---- */
+  { name:'Industrial Steel Wire Form',     cat:'Wire Forms',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/industrial-steel-wire-form-1751711297-8182775.jpeg',           url:'https://www.gurudattatradingco.in/industrial-steel-wire-form.htm' },
+  { name:'Mild Steel Wire Form',           cat:'Wire Forms',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mild-steel-wire-form-1751711084-8182753.jpeg',                 url:'https://www.gurudattatradingco.in/mild-steel-wire-form.htm' },
+  { name:'Spring Steel Wire Form',         cat:'Wire Forms',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/spring-steel-wire-form-1751711224-8182764.jpeg',               url:'https://www.gurudattatradingco.in/spring-steel-wire-form.htm' },
+  { name:'Stainless Steel Wire Form',      cat:'Wire Forms',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-wire-form-1751711163-8182757.jpeg',            url:'https://www.gurudattatradingco.in/stainless-steel-wire-form.htm' },
+  /* ---- Snap Rings ---- */
+  { name:'Circlips Snap Rings',            cat:'Snap Rings',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/circlips-snap-rings-1751698421-8181869.jpeg',                  url:'https://www.gurudattatradingco.in/circlips-snap-rings.htm' },
+  { name:'SS Snap Rings',                  cat:'Snap Rings',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-snap-rings-1751709837-8182640.jpeg',           url:'https://www.gurudattatradingco.in/stainless-steel-snap-rings.htm' },
+  { name:'Synchronizer Snap Rings',        cat:'Snap Rings',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/synchronizer-snap-rings-1751698533-8181880.jpeg',              url:'https://www.gurudattatradingco.in/synchronizer-snap-rings.htm' },
+  /* ---- Spring Sets ---- */
+  { name:'Compression Spring Set',         cat:'Spring Sets',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/compression-spring-set-1751712101-8182833.jpeg',              url:'https://www.gurudattatradingco.in/compression-spring-set.htm' },
+  { name:'Industrial Spring Set',          cat:'Spring Sets',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/industrial-spring-set-1751712171-8182841.jpeg',               url:'https://www.gurudattatradingco.in/industrial-spring-set.htm' },
+  { name:'Polished SS Spring Set',         cat:'Spring Sets',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/polished-stainless-steel-spring-set-1751706850-8182446.jpeg', url:'https://www.gurudattatradingco.in/polished-stainless-steel-spring-set.htm' },
+  { name:'Silver SS Spring Set',           cat:'Spring Sets',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/silver-stainless-steel-spring-set-1751704801-8182292.jpeg',   url:'https://www.gurudattatradingco.in/silver-stainless-steel-spring-set.htm' },
+  /* ---- Dowel Pins ---- */
+  { name:'Industrial Dowel Pins',          cat:'Dowel Pins',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/industrial-dowel-pins-1751709341-8182610.jpeg',               url:'https://www.gurudattatradingco.in/industrial-dowel-pins.htm' },
+  { name:'Spring Dowel Pins',              cat:'Dowel Pins',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/spring-dowel-pins-1751709404-8182615.jpeg',                   url:'https://www.gurudattatradingco.in/spring-dowel-pins.htm' },
+  { name:'SS Dowel Pins',                  cat:'Dowel Pins',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-dowel-pins-1751709245-8182609.jpeg',          url:'https://www.gurudattatradingco.in/stainless-steel-dowel-pins.htm' },
+  { name:'Taper Dowel Pins',               cat:'Dowel Pins',         img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/taper-dowel-pins-1751709529-8182621.jpeg',                    url:'https://www.gurudattatradingco.in/taper-dowel-pins.htm' },
+  /* ---- Shaft Seals ---- */
+  { name:'Mechanical Shaft Seal',          cat:'Shaft Seals',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/mechanical-shaft-seals-1751714326-8182972.jpeg',              url:'https://www.gurudattatradingco.in/mechanical-shaft-seal.htm' },
+  { name:'Rotary Shaft Seal',              cat:'Shaft Seals',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/rotary-shaft-seal-1751714463-8182987.jpeg',                   url:'https://www.gurudattatradingco.in/rotary-shaft-seal.htm' },
+  { name:'SS Shaft Seal',                  cat:'Shaft Seals',        img:'https://2.wlimg.com/product_images/bc-small/2025/7/13516914/stainless-steel-shaft-seal-1751714408-8182977.jpeg',          url:'https://www.gurudattatradingco.in/stainless-steel-shaft-seal.htm' },
+];
+
+/* Category descriptions shown in modal */
+const CAT_DESCS = {
+  'Industrial Springs':  'Premium quality industrial-grade spring manufactured in Mumbai. Available in custom sizes, materials, and surface finishes. Enquire for bulk pricing.',
+  'Mild Steel Springs':  'High-quality mild steel spring to IS standards. Red, black, silver or polished finishes available. Custom dimensions on request.',
+  'SS Springs':          'Precision-wound stainless steel spring with excellent corrosion resistance. Suitable for food-grade, marine, and chemical environments.',
+  'SS Hooks':            'Durable stainless steel hook for industrial and commercial use. Available in C, S, U and triangle styles. Polished or standard finish.',
+  'Circlips & Pins':     'High-precision stainless steel circlip or pin component for reliable shaft and bore retention. Multiple sizes in stock.',
+  'Wire Forms':          'Custom and standard wire forms in mild steel, stainless steel, and spring steel. Bent to drawing or sample.',
+  'Snap Rings':          'Reliable snap ring / circlip for groove-fit applications. Stainless steel options available.',
+  'Spring Sets':         'Assorted spring set for workshops, prototyping, or service kits. Compression or stainless steel variants available.',
+  'Dowel Pins':          'Precision dowel pin for alignment and positioning. Industrial, taper, and stainless options to close tolerances.',
+  'Shaft Seals':         'Mechanical and rotary shaft seals for preventing leakage in rotating assemblies.',
+};
+
+/* Category specs shown in modal */
+const CAT_SPECS = {
+  'Industrial Springs':  [['Material','Mild Steel / Alloy Steel'],['Finish','As per requirement'],['Standard','IS / DIN'],['MOQ','Contact Us']],
+  'Mild Steel Springs':  [['Material','IS 4454 Mild Steel'],['Finish','Red / Black / Polished'],['Standard','IS 4454'],['MOQ','Contact Us']],
+  'SS Springs':          [['Material','SS 302 / 304 / 316'],['Finish','Bright / Polished'],['Standard','ASTM A313'],['MOQ','Contact Us']],
+  'SS Hooks':            [['Material','SS 304 / 316'],['Finish','Polished / Standard'],['Standard','ISO'],['MOQ','Contact Us']],
+  'Circlips & Pins':     [['Material','SS 304'],['Finish','Bright'],['Standard','DIN 471/472'],['MOQ','Contact Us']],
+  'Wire Forms':          [['Material','MS / SS / Spring Steel'],['Finish','As required'],['Standard','As per drawing'],['MOQ','Contact Us']],
+  'Snap Rings':          [['Material','SS 304 / Carbon Steel'],['Finish','Standard'],['Standard','DIN'],['MOQ','Contact Us']],
+  'Spring Sets':         [['Contents','Assorted sizes'],['Material','SS / Mild Steel'],['Packaging','Box / Bag'],['MOQ','1 Set']],
+  'Dowel Pins':          [['Material','SS 304 / Alloy Steel'],['Tolerance','h6'],['Standard','ISO 8734'],['MOQ','Contact Us']],
+  'Shaft Seals':         [['Material','Rubber / SS'],['Type','Rotary / Mechanical'],['Standard','ISO'],['MOQ','Contact Us']],
+};
+
+
+/* ===================================================
+   9. PRODUCTS — CATEGORY FILTER & RENDERING
+   =================================================== */
+const CATEGORIES = ['All', ...new Set(ALL_PRODUCTS.map(p => p.cat))];
+let activeCat = 'All';
+
+/* Build a single product card HTML string */
+function buildProductCard(product, globalIndex) {
+  return `
+    <article class="prod-card"
+             data-idx="${globalIndex}"
+             role="button"
+             tabindex="0"
+             aria-label="${product.name} — click to view details">
+      <div class="prod-img">
+        <img src="${product.img}"
+             alt="${product.name} — Gurudatta Trading Co."
+             loading="lazy"
+             onerror="this.src='https://placehold.co/400x300/1e2d4a/f0a500?text=Spring'"/>
+        <span class="prod-cat-badge">${product.cat}</span>
+      </div>
+      <div class="prod-body">
+        <h3 class="prod-name">${product.name}</h3>
+        <div class="prod-footer">
+          <span class="prod-enquire">Enquire →</span>
+          <span class="prod-view">Details</span>
+        </div>
+      </div>
+    </article>`;
+}
+
+/* Render category tab buttons */
+function renderCatTabs() {
+  const container = document.getElementById('cat-tabs');
+  container.innerHTML = CATEGORIES.map(cat =>
+    `<button class="cat-tab${cat === activeCat ? ' active' : ''}"
+             data-cat="${cat}"
+             role="tab"
+             aria-selected="${cat === activeCat}">${cat}</button>`
+  ).join('');
+
+  /* Attach click handlers */
+  container.querySelectorAll('.cat-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCat = btn.dataset.cat;
+      renderCatTabs();     /* re-render tabs to update active state */
+      renderProducts();    /* re-render filtered products */
+    });
+  });
+}
+
+/* Render the products grid, filtered by activeCat */
+function renderProducts() {
+  const grid    = document.getElementById('prod-grid');
+  const visible = activeCat === 'All'
+    ? ALL_PRODUCTS
+    : ALL_PRODUCTS.filter(p => p.cat === activeCat);
+
+  grid.innerHTML = visible
+    .map(product => buildProductCard(product, ALL_PRODUCTS.indexOf(product)))
+    .join('');
+
+  /* Attach click + keyboard to each card */
+  grid.querySelectorAll('.prod-card').forEach(card => {
+    card.addEventListener('click',   () => openProductModal(parseInt(card.dataset.idx)));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProductModal(parseInt(card.dataset.idx));
+      }
+    });
+  });
+}
+
+/* Initial render */
+renderCatTabs();
+renderProducts();
+
+
+/* ===================================================
+   10. PRODUCT DETAIL MODAL
+   =================================================== */
+
+/* Open modal and populate with product data */
+function openProductModal(productIndex) {
+  const product = ALL_PRODUCTS[productIndex];
+  if (!product) return;
+
+  /* Populate modal fields */
+  document.getElementById('modal-img').src         = product.img;
+  document.getElementById('modal-img').alt         = product.name + ' — Gurudatta Trading Co.';
+  document.getElementById('modal-cat').textContent = product.cat;
+  document.getElementById('modal-title').textContent = product.name;
+  document.getElementById('modal-desc').textContent  =
+    CAT_DESCS[product.cat] || 'Premium quality product manufactured by Gurudatta Trading Co., Mumbai.';
+
+  /* Populate specs grid */
+  const specs = CAT_SPECS[product.cat] || [];
+  document.getElementById('modal-specs').innerHTML = specs
+    .map(([label, value]) =>
+      `<div class="modal-spec">
+         <div class="modal-spec-label">${label}</div>
+         <div class="modal-spec-val">${value}</div>
+       </div>`)
+    .join('');
+
+  /* Set source link */
+  document.getElementById('modal-source-btn').href = product.url;
+
+  /* Show the overlay */
+  document.getElementById('prod-modal').classList.add('open');
+  document.body.style.overflow = 'hidden'; /* prevent body scroll behind modal */
+}
+
+/* Close modal */
+function closeProductModal() {
+  document.getElementById('prod-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* Close button inside modal */
+document.getElementById('modal-close-btn').addEventListener('click', closeProductModal);
+
+/* Click on the dark overlay (outside the white box) closes modal */
+document.getElementById('prod-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeProductModal();
+});
+
+/* Escape key closes modal */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeProductModal();
+});
+
+/* "Enquire Now" inside modal scrolls to contact and closes modal */
+document.getElementById('modal-enquire-btn').addEventListener('click', () => {
+  closeProductModal();
+});
+
+
+/* ===================================================
+   11. CONTACT FORM
+   =================================================== */
+document.getElementById('cf-btn').addEventListener('click', async () => {
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const message = document.getElementById('cf-msg').value.trim();
+
+  /* Validate each field */
+  let isFormValid = true;
+  const validations = [
+    { id: 'cf-name',  errId: 'err-cf-name',  bad: name.length < 2 },
+    { id: 'cf-email', errId: 'err-cf-email', bad: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) },
+    { id: 'cf-msg',   errId: 'err-cf-msg',   bad: message.length < 10 },
+  ];
+  validations.forEach(({ id, errId, bad }) => {
+    document.getElementById(id).classList.toggle('err', bad);
+    document.getElementById(errId).classList.toggle('show', bad);
+    if (bad) isFormValid = false;
+  });
+  if (!isFormValid) return;
+
+  /* Send */
+  const btn = document.getElementById('cf-btn');
+  btn.disabled  = true;
+  btn.innerHTML = '<span class="spinner"></span> Sending…';
+
+  const statusEl = document.getElementById('cf-status');
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({
+        action:    'contact',
+        name,
+        email,
+        message,
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      }),
+      mode: 'no-cors',
+    });
+    statusEl.textContent = '✅ Message sent! We\'ll respond within 24 hours.';
+    statusEl.className   = 'cform-status show ok';
+    /* Clear the form */
+    document.getElementById('cf-name').value  = '';
+    document.getElementById('cf-email').value = '';
+    document.getElementById('cf-msg').value   = '';
+  } catch (err) {
+    statusEl.textContent = '⚠️ Could not send. Please email gurudattatradingco@gmail.com directly.';
+    statusEl.className   = 'cform-status show ng';
+    console.error('Contact form error:', err);
+  } finally {
+    btn.disabled  = false;
+    btn.innerHTML = '📨 Send Message';
+  }
+});
+
+
+/* ===================================================
+   12. SMOOTH SCROLL for all anchor links
+   =================================================== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+</script>
+</body>
+</html>

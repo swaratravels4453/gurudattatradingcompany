@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5"/>
+<title>Spring Rate Calculator | Gurudatta Trading Co. Mumbai</title>
+<meta name="description" content="Free online spring rate calculator by Gurudatta Trading Co. Compute spring rate, solid height, max load, stress and full spec report instantly."/>
+<meta name="keywords" content="spring rate calculator online free, compression spring calculator India, spring constant calculator, spring stress calculator, spring design tool Mumbai"/>
+<meta name="author" content="Gurudatta Trading Co."/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="IN-MH"/>
+<meta name="geo.placename" content="Mumbai, Maharashtra"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Spring Rate Calculator | Gurudatta Trading Co."/>
+<meta property="og:description" content="Free online spring rate calculator by Gurudatta Trading Co. Compute spring rate, solid height, max load, stress and full spec report instantly."/>
+<meta property="og:image" content="https://2.wlimg.com/company_logo/13516914.jpg"/>
+<meta property="og:site_name" content="Gurudatta Trading Co."/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"LocalBusiness",
+  "name":"Gurudatta Trading Co.",
+  "description":"Mild Steel Springs Manufacturer and Supplier from Mumbai, India.",
+  "url":"https://www.gurudattatradingco.in",
+  "telephone":"+918454995315",
+  "email":"gurudattatradingco@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   GURUDATTA TRADING CO. — styles.css
+   Sections:
+     1.  Variables & Reset
+     2.  Utility Classes
+     3.  Header
+     4.  Hero
+     5.  Calculator (SpringCreator-style)
+     6.  Products + Modal
+     7.  Testimonials
+     8.  Contact
+     9.  Footer
+    10.  Mobile Bottom Nav
+    11.  Keyframe Animations
+    12.  Responsive Breakpoints
+   ============================================================ */
+
+/* ===== 1. VARIABLES & RESET ===== */
+:root {
+  --navy:        #0a0f1e;
+  --navy-mid:    #0d1630;
+  --navy-light:  #152040;
+  --steel:       #1e2d4a;
+  --steel-mid:   #263556;
+  --accent:      #f0a500;
+  --accent-dim:  #c78a00;
+  --highlight:   #3b8bff;
+  --teal:        #0d5c7a;
+  --teal-dark:   #0a4a62;
+  --teal-pale:   #e8f4fb;
+  --white:       #ffffff;
+  --offwhite:    #e8edf5;
+  --grey:        #8a9ab8;
+  --grey-light:  #b0bdd4;
+  --border:      rgba(255, 255, 255, 0.08);
+  --card-bg:     rgba(21, 32, 64, 0.92);
+  --radius:      10px;
+  --tr:          0.24s ease;
+  --ff-d:        'Barlow Condensed', sans-serif;
+  --ff-b:        'Barlow', sans-serif;
+  --ff-a:        'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-b);
+  background: var(--navy);
+  color: var(--offwhite);
+  overflow-x: hidden;
+  padding-bottom: 72px; /* space for mobile bottom nav */
+}
+
+/* ===== 2. UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section label (small caps above title) */
+.sec-label {
+  display: block;
+  font-family: var(--ff-a);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* Section heading */
+.sec-title {
+  font-family: var(--ff-d);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+/* Section sub-paragraph */
+.sec-sub {
+  font-size: 1rem;
+  color: var(--grey-light);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Shared button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-a);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--tr);
+  text-decoration: none;
+}
+.btn-primary { background: var(--accent); color: var(--navy); }
+.btn-primary:hover { background: var(--accent-dim); transform: translateY(-2px); box-shadow: 0 0 20px rgba(240,165,0,0.3); }
+.btn-outline  { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+.btn-outline:hover  { background: var(--accent); color: var(--navy); transform: translateY(-2px); }
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Dark-theme shared form fields (used in Contact section) */
+.field-group    { margin-bottom: 16px; }
+.field-label    { display: block; font-family: var(--ff-a); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 6px; }
+.field-label .req { color: var(--accent); }
+.field-input    { width: 100%; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 11px 14px; font-family: var(--ff-b); font-size: 14px; color: var(--white); transition: all var(--tr); outline: none; }
+.field-input::placeholder { color: rgba(255,255,255,0.22); }
+.field-input:focus  { border-color: var(--accent); background: rgba(240,165,0,0.05); box-shadow: 0 0 0 3px rgba(240,165,0,0.1); }
+.field-input.err    { border-color: #e74c3c; }
+.field-error        { font-size: 11px; color: #e74c3c; margin-top: 4px; display: none; }
+.field-error.show   { display: block; }
+
+
+/* ============================= */
+/* ===== 3. HEADER SECTION ===== */
+/* ============================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 30, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--tr);
+}
+header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
+/* Inner flex row */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+
+/* Logo */
+.logo { text-decoration: none; display: flex; flex-direction: column; }
+.logo-name { font-family: var(--ff-d); font-weight: 900; font-size: 18px; color: var(--white); letter-spacing: 1px; line-height: 1; }
+.logo-name span { color: var(--accent); }
+.logo-tag  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 2px; color: var(--grey); text-transform: uppercase; margin-top: 2px; }
+
+/* Desktop navigation links */
+nav { display: flex; gap: 2px; }
+nav a { font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 8px 15px; border-radius: 6px; transition: all var(--tr); }
+nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1); }
+
+/* Hamburger toggle button */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--offwhite); border-radius: 2px; transition: all var(--tr); }
+
+/* Mobile nav drawer */
+.mob-drawer { display: none; flex-direction: column; background: var(--navy-mid); border-top: 1px solid var(--border); padding: 12px 0; }
+.mob-drawer a { font-family: var(--ff-a); font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 13px 24px; border-bottom: 1px solid var(--border); transition: color var(--tr); }
+.mob-drawer a:hover { color: var(--accent); }
+.mob-drawer.open { display: flex; }
+
+
+/* ============================= */
+/* ===== 4. HERO SECTION ===== */
+/* ============================= */
+#home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 66px;
+  overflow: hidden;
+}
+
+/* Subtle grid background lines */
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,139,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,139,255,0.035) 1px, transparent 1px);
+  background-size: 55px 55px;
+  pointer-events: none;
+}
+
+/* Radial glow orbs */
+.hero-glow1 { position: absolute; top: 15%; right: 3%; width: 480px; height: 480px; background: radial-gradient(circle, rgba(240,165,0,0.11) 0%, transparent 70%); pointer-events: none; }
+.hero-glow2 { position: absolute; bottom: 5%; left: -80px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(59,139,255,0.09) 0%, transparent 70%); pointer-events: none; }
+
+/* Decorative spring SVG (desktop only) */
+.hero-spring { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44%; max-width: 540px; opacity: 0.8; pointer-events: none; }
+
+/* Hero content block */
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+
+/* Animated top badge */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.28);
+  border-radius: 50px; padding: 5px 16px;
+  font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+
+/* Main H1 */
+.hero-h1 { font-family: var(--ff-d); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 18px; animation: fadeUp 0.6s 0.15s ease both; }
+.hero-h1 .acc { color: var(--accent); }
+.hero-h1 .hl  { color: var(--highlight); }
+
+/* Subheadline */
+.hero-sub { font-size: 1.05rem; color: var(--grey-light); line-height: 1.75; margin-bottom: 32px; animation: fadeUp 0.6s 0.28s ease both; }
+
+/* CTA buttons row */
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
+
+/* Stats strip */
+.hero-stats { display: flex; gap: 28px; margin-top: 50px; padding-top: 28px; border-top: 1px solid var(--border); animation: fadeUp 0.6s 0.52s ease both; flex-wrap: wrap; }
+.stat-num { font-family: var(--ff-d); font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.stat-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-top: 3px; }
+
+
+/* ============================================================ */
+/* ===== 5. CALCULATOR SECTION (SpringCreator-style) ===== */
+/* ============================================================ */
+#calculator {
+  background: var(--navy-mid);
+  padding: 90px 0 100px;
+  position: relative;
+}
+/* Accent top line */
+#calculator::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Two-column layout */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 52px;
+  align-items: start;
+}
+.calc-intro .sec-sub { margin-bottom: 24px; }
+
+/* Feature list on the left */
+.calc-feature-list { list-style: none; margin-top: 22px; }
+.calc-feature-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13.5px; color: var(--grey-light);
+  margin-bottom: 13px; line-height: 1.55;
+}
+.calc-feature-list li .ck {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background: rgba(240,165,0,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 11px; margin-top: 1px;
+}
+
+/* ---- Main white calculator card ---- */
+.calc-card {
+  background: var(--white);
+  border-radius: 14px;
+  /* IMPORTANT: no overflow:hidden — prevents result panel from being clipped */
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Dark teal header bar */
+.calc-header {
+  background: var(--teal);
+  padding: 18px 24px;
+  text-align: center;
+  border-radius: 14px 14px 0 0;
+}
+.calc-header h2 {
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.4rem; letter-spacing: 2px;
+  color: var(--white); text-transform: uppercase;
+}
+
+/* Spring type tabs */
+.calc-tabs-row {
+  padding: 16px 20px 0;
+  background: var(--white);
+}
+.calc-tabs-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.calc-tabs-label, .unit-label {
+  font-size: 12px;
+  color: #555;
+  font-family: var(--ff-b);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Three spring-type tab buttons */
+.calc-tabs {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+.calc-tab {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 6px;
+  border: 1.5px solid #c8d8e0; border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase;
+  color: #444; background: var(--white);
+  transition: all var(--tr);
+  white-space: nowrap;
+}
+.calc-tab svg { width: 20px; height: 20px; flex-shrink: 0; }
+.calc-tab.active                { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.calc-tab:not(.active):hover    { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* English / Metric toggle */
+.unit-wrap { flex-shrink: 0; }
+.unit-btns {
+  display: flex;
+  border: 1.5px solid #c8d8e0; border-radius: 6px; overflow: hidden;
+}
+.unit-btn {
+  padding: 7px 16px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 1px;
+  cursor: pointer; border: none;
+  background: var(--white); color: #444;
+  transition: all var(--tr);
+}
+.unit-btn.active              { background: var(--teal); color: var(--white); }
+.unit-btn:not(.active):hover  { background: var(--teal-pale); color: var(--teal); }
+
+/* Info / hint banner */
+.calc-banner {
+  margin: 10px 20px 0;
+  background: var(--teal-pale);
+  border: 1px solid #c0dce8;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px; color: #2d5a6e; line-height: 1.6; text-align: center;
+}
+.calc-banner strong { color: var(--teal); }
+
+/* ---- 4-column parameter inputs ---- */
+.calc-params {
+  padding: 14px 20px 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Single parameter column */
+.cparam { display: flex; flex-direction: column; gap: 4px; }
+
+/* Label above each field */
+.cparam-label {
+  font-size: 10.5px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); line-height: 1.3;
+}
+.cparam-label .unit-hint { font-size: 10px; color: #888; font-weight: 400; }
+
+/* Exact / Range badges */
+.design-badge { display: flex; gap: 4px; }
+.design-badge .db {
+  font-size: 10px;
+  background: var(--teal-pale); border: 1px solid var(--teal);
+  color: var(--teal); padding: 2px 7px; border-radius: 3px;
+  cursor: pointer; font-family: var(--ff-a); font-weight: 600;
+  transition: all var(--tr);
+}
+.design-badge .db.active { background: var(--teal); color: var(--white); }
+
+/* Input row inside a param (min — max) */
+.cparam-inputs { display: flex; align-items: center; gap: 4px; }
+.cparam-input {
+  flex: 1; min-width: 0;
+  padding: 8px 8px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 13px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cparam-input:focus  { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cparam-input.err    { border-color: #e74c3c; }
+.cparam-dash  { color: #aaa; font-size: 13px; flex-shrink: 0; }
+.cparam-unit  { font-size: 10px; color: #666; font-family: var(--ff-b); font-weight: 600; flex-shrink: 0; }
+.cparam-sub   { font-size: 9.5px; color: #bbb; text-align: center; font-family: var(--ff-b); margin-top: 1px; }
+
+/* ---- Material / End-type / Wind-direction row ---- */
+.calc-extra {
+  padding: 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+  gap: 14px;
+  align-items: start;
+}
+.cextra-label {
+  font-size: 11px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); margin-bottom: 6px;
+}
+.cextra-select {
+  width: 100%; padding: 9px 10px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 12px; font-family: var(--ff-b); color: #111;
+  background: var(--white); outline: none;
+  transition: border var(--tr);
+}
+.cextra-select:focus { border-color: var(--teal); }
+
+/* End-type & wind-direction toggle buttons */
+.end-btns, .wind-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+.end-btn, .wind-btn {
+  padding: 7px 11px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-family: var(--ff-a); font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all var(--tr);
+  background: var(--white); color: #444;
+}
+.end-btn.active, .wind-btn.active               { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.end-btn:not(.active):hover, .wind-btn:not(.active):hover { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* ---- Name & Mobile fields (grey strip) ---- */
+.calc-user-row {
+  background: #f5f8fa;
+  border-top: 1px solid #d8e8ef;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.cuf-label { font-size: 11px; font-weight: 600; color: #555; font-family: var(--ff-b); margin-bottom: 5px; }
+.cuf-label .req { color: #e74c3c; }
+.cuf-input {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 14px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cuf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cuf-input.err   { border-color: #e74c3c; }
+.cuf-error       { font-size: 11px; color: #e74c3c; margin-top: 3px; display: none; }
+.cuf-error.show  { display: block; }
+
+/* ---- Calculate / Reset buttons ---- */
+.calc-actions {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px 20px;
+  justify-content: center;
+}
+.btn-calc-go {
+  flex: 1.5;
+  background: #5a9e2f; border: none; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--white); cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-go:hover   { background: #4a8422; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(90,158,47,0.35); }
+.btn-calc-go:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+.btn-calc-reset {
+  flex: 0.8;
+  background: transparent; border: 1.5px solid #c8d8e0; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  color: #666; cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-reset:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-pale); }
+
+/* ---- Result display panel (FIXED: outside overflow, always visible) ---- */
+.calc-result-wrap {
+  padding: 0 20px 20px;
+  /* This wrapper lives INSIDE .calc-card but after the actions */
+}
+.calc-result {
+  display: none; /* JS adds .show to reveal */
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: center;
+  animation: fadeUp 0.35s ease both;
+}
+.calc-result.show { display: block; }
+
+.result-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+.result-val { font-family: var(--ff-d); font-size: 2.4rem; font-weight: 900; color: var(--white); line-height: 1; }
+.result-sub { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px; }
+
+/* Status message below result */
+.calc-status {
+  display: none;
+  margin: 8px 20px 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-family: var(--ff-a);
+}
+.calc-status.show { display: block; }
+.calc-status.ok   { background: rgba(39,174,96,0.12); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.calc-status.ng   { background: rgba(231,76,60,0.10); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 6. PRODUCTS + MODAL ===== */
+/* ============================= */
+#products { background: var(--navy); padding: 90px 0; }
+
+/* Section header with "full catalogue" link */
+.prod-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Category filter tabs row */
+.cat-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.cat-tab {
+  font-family: var(--ff-a); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border);
+  color: var(--grey); cursor: pointer;
+  background: none;
+  transition: all var(--tr);
+}
+.cat-tab:hover          { border-color: rgba(240,165,0,0.4); color: var(--accent); }
+.cat-tab.active         { background: var(--accent); border-color: var(--accent); color: var(--navy); }
+
+/* Products grid */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Single product card */
+.prod-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--tr);
+}
+.prod-card:hover { transform: translateY(-5px); border-color: rgba(240,165,0,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+
+/* Image wrapper */
+.prod-img       { position: relative; height: 180px; overflow: hidden; background: var(--steel); }
+.prod-img img   { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.prod-card:hover .prod-img img { transform: scale(1.07); }
+
+/* Category badge on image */
+.prod-cat-badge {
+  position: absolute; bottom: 8px; left: 8px;
+  background: rgba(13,92,122,0.88); color: var(--white);
+  font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+}
+
+/* Card text body */
+.prod-body   { padding: 14px; }
+.prod-name   { font-family: var(--ff-d); font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 8px; }
+.prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.prod-enquire { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+.prod-view    { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--highlight); }
+
+/* Skeleton loader card */
+.skel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.skel-img { height: 180px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; }
+.skel-body { padding: 14px; }
+.skel-line { height: 12px; border-radius: 4px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; margin-bottom: 8px; }
+.skel-line.sh { width: 55%; }
+
+/* ---- Product Detail Modal ---- */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%; max-width: 700px;
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: rgba(255,255,255,0.1); border: none;
+  color: var(--white); font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr); z-index: 1;
+}
+.modal-close:hover { background: rgba(255,255,255,0.22); }
+.modal-img         { width: 100%; height: 260px; object-fit: cover; border-radius: 12px 12px 0 0; }
+.modal-body        { padding: 26px; }
+.modal-cat         { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+.modal-title       { font-family: var(--ff-d); font-size: 1.8rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.modal-desc        { font-size: 14px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.modal-specs       { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+.modal-spec        { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
+.modal-spec-label  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 3px; }
+.modal-spec-val    { font-size: 13px; color: var(--offwhite); font-weight: 500; }
+.modal-actions     { display: flex; gap: 12px; flex-wrap: wrap; }
+.modal-actions .btn { flex: 1; justify-content: center; }
+
+
+/* ============================= */
+/* ===== 7. TESTIMONIALS ===== */
+/* ============================= */
+#testimonials {
+  background: var(--navy-mid);
+  padding: 90px 0;
+  position: relative;
+}
+#testimonials::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+}
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 48px; }
+.testi-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px; transition: all var(--tr); }
+.testi-card:hover { border-color: rgba(59,139,255,0.3); transform: translateY(-4px); }
+.testi-stars  { color: var(--accent); font-size: 13px; margin-bottom: 10px; }
+.testi-q      { font-family: Georgia, serif; font-size: 3.5rem; line-height: 0.5; color: var(--accent); opacity: 0.45; margin-bottom: 14px; }
+.testi-txt    { font-size: 13.5px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.testi-author { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.testi-av     { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--ff-d); font-weight: 800; font-size: 0.95rem; color: var(--navy); flex-shrink: 0; }
+.testi-name   { font-family: var(--ff-a); font-weight: 600; font-size: 14px; color: var(--white); }
+.testi-role   { font-size: 12px; color: var(--grey); margin-top: 2px; }
+
+
+/* ============================= */
+/* ===== 8. CONTACT ===== */
+/* ============================= */
+#contact { background: var(--navy); padding: 90px 0; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+.contact-info { margin-top: 28px; }
+.cinfo-item  { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.cinfo-icon  { width: 44px; height: 44px; background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.2); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.cinfo-lbl   { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 2px; }
+.cinfo-val   { font-size: 14px; color: var(--offwhite); }
+.contact-form-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 36px; backdrop-filter: blur(10px); }
+.cform-title  { font-family: var(--ff-d); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+.cform-status { display: none; margin-top: 12px; padding: 10px 14px; border-radius: 7px; font-size: 13px; font-family: var(--ff-a); }
+.cform-status.show { display: block; }
+.cform-status.ok   { background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.cform-status.ng   { background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 9. FOOTER ===== */
+/* ============================= */
+footer {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--border);
+  padding: 44px 0 24px;
+}
+.footer-inner  { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.footer-copy   { font-size: 12px; color: var(--grey); text-align: center; }
+.footer-links  { display: flex; gap: 18px; }
+.footer-links a { font-family: var(--ff-a); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey); text-decoration: none; transition: color var(--tr); }
+.footer-links a:hover { color: var(--accent); }
+
+
+/* ============================= */
+/* ===== 10. MOBILE BOTTOM NAV ===== */
+/* ============================= */
+.bnav {
+  display: none; /* shown via media query on mobile */
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(10,15,30,0.97);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 6px 0 env(safe-area-inset-bottom, 6px);
+}
+.bnav-inner { display: flex; justify-content: space-around; }
+.bnav-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  color: var(--grey); background: none; border: none;
+  padding: 6px 12px; border-radius: 8px;
+  cursor: pointer; font-family: inherit;
+  transition: color var(--tr);
+}
+.bnav-btn.active, .bnav-btn:hover { color: var(--accent); }
+.bnav-icon { font-size: 19px; }
+.bnav-lbl  { font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+
+/* ============================= */
+/* ===== 11. KEYFRAME ANIMATIONS ===== */
+/* ============================= */
+@keyframes fadeUp   { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse    { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+@keyframes shimmer  { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes spin     { to { transform: rotate(360deg); } }
+@keyframes modalIn  { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+
+/* ============================= */
+/* ===== 12. RESPONSIVE ===== */
+/* ============================= */
+
+/* ---- Tablet ---- */
+@media (max-width: 1024px) {
+  .calc-layout { grid-template-columns: 1fr; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra  { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  nav          { display: none; }
+  .hamburger   { display: flex; }
+  /* Show fixed bottom nav */
+  .bnav        { display: block; }
+  /* Hero adjustments */
+  .hero-spring { display: none; }
+  .hero-stats  { gap: 16px; }
+  /* Layout stacking */
+  .contact-layout { grid-template-columns: 1fr; }
+  .prod-header    { flex-direction: column; align-items: flex-start; }
+  /* Calculator */
+  .calc-params  { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra   { grid-template-columns: 1fr; }
+  .calc-user-row { grid-template-columns: 1fr; }
+  /* Modal specs */
+  .modal-specs { grid-template-columns: 1fr; }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 480px) {
+  .hero-btns   { flex-direction: column; }
+  .testi-grid  { grid-template-columns: 1fr; }
+  .calc-tabs   { flex-direction: column; }
+  .calc-actions { flex-direction: column; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-tabs-meta { flex-direction: column; }
+}
+
+
+/* ============================================================
+   SPRING CALCULATION REPORT STYLES
+   (appended to styles.css)
+   ============================================================ */
+
+/* Result panel — overridden to fit full report */
+.calc-result {
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeUp 0.4s ease both;
+}
+.calc-result.show { display: block; }
+
+/* ---- Report card container ---- */
+.rpt-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--ff-b);
+  color: #111;
+}
+
+/* ---- Report header strip ---- */
+.rpt-header {
+  background: var(--teal);
+  padding: 14px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.rpt-tag {
+  font-family: var(--ff-d);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.rpt-customer {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+.rpt-header-r {
+  text-align: right;
+}
+.rpt-date {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2px;
+}
+.rpt-brand {
+  font-family: var(--ff-d);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* ---- 3 hero metric boxes ---- */
+.rpt-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f0f7fa;
+  border-bottom: 2px solid #d0e8f0;
+}
+.rpt-hero-item {
+  padding: 14px 16px;
+  text-align: center;
+  border-right: 1px solid #d0e8f0;
+}
+.rpt-hero-item:last-child { border-right: none; }
+.rpt-hero-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 4px;
+}
+.rpt-hero-val {
+  font-family: var(--ff-d);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+}
+
+/* ---- Two-column layout inside report ---- */
+.rpt-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #e0ecf0;
+}
+
+/* ---- Each section block ---- */
+.rpt-section {
+  padding: 14px 18px;
+  border-right: 1px solid #e0ecf0;
+}
+.rpt-section:last-child { border-right: none; }
+.rpt-table-section {
+  border-right: none;
+  border-top: 1px solid #e0ecf0;
+}
+
+/* Section heading */
+.rpt-sec-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #d0e8f0;
+}
+
+/* Each data row (label: value) */
+.rpt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f4f6;
+  font-size: 12px;
+  gap: 8px;
+}
+.rpt-row:last-child { border-bottom: none; }
+.rpt-lbl {
+  color: #555;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.rpt-val {
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+}
+/* Highlighted row (stress) */
+.rpt-hi .rpt-val { color: #c0392b; }
+.rpt-hi .rpt-lbl { color: #333; }
+
+/* ---- Load vs travel table ---- */
+.rpt-table-wrap { overflow-x: auto; }
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 300px;
+}
+.rpt-table thead tr {
+  background: var(--teal);
+  color: var(--white);
+}
+.rpt-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-family: var(--ff-a);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.rpt-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #e8f0f4;
+  color: #222;
+}
+.rpt-table tbody tr:nth-child(even) { background: #f5fafc; }
+.rpt-table tbody tr:hover { background: #e8f4fb; }
+
+/* ---- Disclaimer note ---- */
+.rpt-note {
+  padding: 10px 18px;
+  background: #fff8e1;
+  border-top: 1px solid #ffe082;
+  font-size: 11px;
+  color: #7a5c00;
+  line-height: 1.6;
+}
+
+/* ---- Responsive: stack columns on small screens ---- */
+@media (max-width: 600px) {
+  .rpt-cols         { grid-template-columns: 1fr; }
+  .rpt-section      { border-right: none; border-bottom: 1px solid #e0ecf0; }
+  .rpt-hero         { grid-template-columns: 1fr; }
+  .rpt-hero-item    { border-right: none; border-bottom: 1px solid #d0e8f0; }
+  .rpt-hero-val     { font-size: 1.1rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Gurudatta Trading Co.">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai, India</span>
+      </a>
+      <nav id="desk-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="calculator.html" class="nav-link active">Calculator</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        
+      </nav>
+      <button class="hamburger" id="hbtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mob-drawer" id="mob-drawer" aria-hidden="true">
+      <a href="index.html" class="mdlink">Home</a>
+      <a href="calculator.html" class="mdlink">Calculator</a>
+      <a href="products.html" class="mdlink">Products</a>
+      <a href="reviews.html" class="mdlink">Reviews</a>
+      <a href="contact.html" class="mdlink">Contact</a>
+      
+    </div>
+  </div>
+</header>
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bnav" aria-label="Mobile bottom navigation">
+  <div class="bnav-inner">
+    <button class="bnav-btn" onclick="location.href='index.html'" aria-label="Home"><span class="bnav-icon">🏠</span><span class="bnav-lbl">Home</span></button>
+    <button class="bnav-btn active" onclick="location.href='calculator.html'" aria-label="Calculator"><span class="bnav-icon">⚙️</span><span class="bnav-lbl">Calculator</span></button>
+    <button class="bnav-btn" onclick="location.href='products.html'" aria-label="Products"><span class="bnav-icon">🔩</span><span class="bnav-lbl">Products</span></button>
+    <button class="bnav-btn" onclick="location.href='reviews.html'" aria-label="Reviews"><span class="bnav-icon">⭐</span><span class="bnav-lbl">Reviews</span></button>
+    <button class="bnav-btn" onclick="location.href='contact.html'" aria-label="Contact"><span class="bnav-icon">📞</span><span class="bnav-lbl">Contact</span></button>
+    
+  </div>
+</nav>
+
+
+<div style="padding-top:66px;"></div>
+<div style="background:var(--navy-mid);padding:40px 0 16px;">
+  <div class="container">
+    <span class="sec-label">Smart Tool</span>
+    <h1 class="sec-title" style="font-size:clamp(1.8rem,4vw,2.6rem);">Spring Rate Calculator</h1>
+    <p class="sec-sub">India's first integrated spring calculator — get an instant full spec report.</p>
+  </div>
+</div>
+<section id="calculator" aria-label="Spring Rate Calculator">
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- Left: intro -->
+      <div class="calc-intro">
+        <span class="sec-label">Smart Tool</span>
+        <h2 class="sec-title">Spring Rate<br>Calculator</h2>
+        <p class="sec-sub">India's first integrated spring calculator. Enter your spring parameters to instantly compute the spring rate — your enquiry is saved automatically.</p>
+        <ul class="calc-feature-list">
+          <li><span class="ck" aria-hidden="true">✓</span>Supports Compression, Extension &amp; Torsion types</li>
+          <li><span class="ck" aria-hidden="true">✓</span>English (inch) and Metric (mm) unit systems</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Exact or Range input modes per dimension</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Result saved instantly to our records via Google Sheets</li>
+        </ul>
+      </div>
+
+      <!-- Right: calculator card -->
+      <div class="calc-card" role="region" aria-label="Spring calculator form">
+
+        <!-- Dark teal header -->
+        <div class="calc-header">
+          <h2>ENTER YOUR DIMENSIONS</h2>
+        </div>
+
+        <!-- Spring type + unit toggle row -->
+        <div class="calc-tabs-row">
+          <div class="calc-tabs-meta">
+            <div style="flex:1;">
+              <span class="calc-tabs-label">Select Your Spring Type</span>
+              <div class="calc-tabs" role="tablist">
+                <button class="calc-tab active" data-type="compression" role="tab" aria-selected="true">
+                  <svg viewBox="0 0 50 50" fill="none" aria-hidden="true"><ellipse cx="25" cy="8" rx="18" ry="5" stroke="currentColor" stroke-width="2.5"/><ellipse cx="25" cy="19" rx="18" ry="5" stroke="currentColor" stroke-width="2.5"/><ellipse cx="25" cy="30" rx="18" ry="5" stroke="currentColor" stroke-width="2.5"/><ellipse cx="25" cy="41" rx="18" ry="5" stroke="currentColor" stroke-width="2.5"/><line x1="7" y1="8" x2="7" y2="41" stroke="currentColor" stroke-width="2"/><line x1="43" y1="8" x2="43" y2="41" stroke="currentColor" stroke-width="2"/></svg>
+                  COMPRESSION
+                </button>
+                <button class="calc-tab" data-type="extension" role="tab" aria-selected="false">
+                  <svg viewBox="0 0 50 50" fill="none" aria-hidden="true"><ellipse cx="25" cy="10" rx="16" ry="4.5" stroke="currentColor" stroke-width="2.2"/><ellipse cx="25" cy="20" rx="16" ry="4.5" stroke="currentColor" stroke-width="2.2"/><ellipse cx="25" cy="30" rx="16" ry="4.5" stroke="currentColor" stroke-width="2.2"/><ellipse cx="25" cy="40" rx="16" ry="4.5" stroke="currentColor" stroke-width="2.2"/><path d="M9 10 Q3 25 9 40" stroke="currentColor" stroke-width="2" fill="none"/><path d="M41 10 Q47 25 41 40" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                  EXTENSION
+                </button>
+                <button class="calc-tab" data-type="torsion" role="tab" aria-selected="false">
+                  <svg viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle cx="25" cy="25" r="16" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 4"/><circle cx="25" cy="25" r="8" stroke="currentColor" stroke-width="2"/><line x1="25" y1="9" x2="25" y2="4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="25" y1="46" x2="25" y2="41" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                  TORSION
+                </button>
+              </div>
+            </div>
+            <div class="unit-wrap">
+              <span class="unit-label">Unit of Measurement</span>
+              <div class="unit-btns" role="group">
+                <button class="unit-btn active" data-unit="english">ENGLISH</button>
+                <button class="unit-btn"        data-unit="metric">METRIC</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info banner -->
+        <div class="calc-banner" role="note">
+          <strong>Attention:</strong> Results shown will be ±10% from middle value.<br>
+          <em>Hint: Closer min &amp; max values give more accurate results.</em>
+        </div>
+
+        <!-- 4 parameter inputs -->
+        <div class="calc-params" id="calc-params">
+
+          <!-- Wire Diameter -->
+          <div class="cparam">
+            <div class="cparam-label">Wire Dia <span class="unit-hint" id="lbl-wd">(IN)</span></div>
+            <div class="design-badge">
+              <span class="db active" data-field="wd" data-mode="exact">Exact</span>
+              <span class="db"        data-field="wd" data-mode="range">Range</span>
+            </div>
+            <div class="cparam-inputs">
+              <input class="cparam-input" id="wd-min" type="number" placeholder="0.038" min="0.001" step="0.001"/>
+              <span  class="cparam-dash"  id="wd-dash" style="display:none">–</span>
+              <input class="cparam-input" id="wd-max" type="number" placeholder="Max" style="display:none"/>
+            </div>
+            <div class="cparam-sub">Min &nbsp;&nbsp;&nbsp; Max</div>
+          </div>
+
+          <!-- Outer Diameter -->
+          <div class="cparam">
+            <div class="cparam-label">Outer Dia <span class="unit-hint" id="lbl-od">(IN)</span></div>
+            <div class="design-badge">
+              <span class="db active" data-field="od" data-mode="exact">Exact</span>
+              <span class="db"        data-field="od" data-mode="range">Range</span>
+            </div>
+            <div class="cparam-inputs">
+              <input class="cparam-input" id="od-min" type="number" placeholder="0.5" min="0.001" step="0.001"/>
+              <span  class="cparam-dash"  id="od-dash" style="display:none">–</span>
+              <input class="cparam-input" id="od-max" type="number" placeholder="Max" style="display:none"/>
+            </div>
+            <div class="cparam-sub">Min &nbsp;&nbsp;&nbsp; Max</div>
+          </div>
+
+          <!-- Free Length -->
+          <div class="cparam">
+            <div class="cparam-label">Free Length <span class="unit-hint" id="lbl-fl">(IN)</span></div>
+            <div class="design-badge">
+              <span class="db active" data-field="fl" data-mode="exact">Exact</span>
+              <span class="db"        data-field="fl" data-mode="range">Range</span>
+            </div>
+            <div class="cparam-inputs">
+              <input class="cparam-input" id="fl-min" type="number" placeholder="1.0" min="0.001" step="0.001"/>
+              <span  class="cparam-dash"  id="fl-dash" style="display:none">–</span>
+              <input class="cparam-input" id="fl-max" type="number" placeholder="Max" style="display:none"/>
+            </div>
+            <div class="cparam-sub">Min &nbsp;&nbsp;&nbsp; Max</div>
+          </div>
+
+          <!-- Total Coils -->
+          <div class="cparam">
+            <div class="cparam-label">Total Coils</div>
+            <div class="design-badge">
+              <span class="db active" data-field="tc" data-mode="exact">Exact</span>
+              <span class="db"        data-field="tc" data-mode="range">Range</span>
+            </div>
+            <div class="cparam-inputs">
+              <input class="cparam-input" id="tc-min" type="number" placeholder="6" min="1" step="0.5"/>
+              <span  class="cparam-dash"  id="tc-dash" style="display:none">–</span>
+              <input class="cparam-input" id="tc-max" type="number" placeholder="Max" style="display:none"/>
+            </div>
+            <div class="cparam-sub">Min &nbsp;&nbsp;&nbsp; Max</div>
+          </div>
+
+        </div><!-- /calc-params -->
+
+        <!-- Material / End types / Wind direction -->
+        <div class="calc-extra">
+          <div>
+            <div class="cextra-label">Material Type</div>
+            <select class="cextra-select" id="material-type">
+              <option>Music Wire ASTM A228</option>
+              <option>Hard Drawn Wire ASTM A227</option>
+              <option>Chrome Vanadium ASTM A232</option>
+              <option>Stainless Steel ASTM A313</option>
+              <option>Phosphor Bronze ASTM B197</option>
+              <option>Mild Steel IS 4454</option>
+            </select>
+          </div>
+          <div>
+            <div class="cextra-label">End Types</div>
+            <div class="end-btns" role="group">
+              <button class="end-btn active" data-end="C">C</button>
+              <button class="end-btn"        data-end="CG">CG</button>
+              <button class="end-btn"        data-end="DC">DC</button>
+              <button class="end-btn"        data-end="O">O</button>
+            </div>
+          </div>
+          <div>
+            <div class="cextra-label">Wind Direction</div>
+            <div class="wind-btns" role="group">
+              <button class="wind-btn active" data-wind="RH">RH</button>
+              <button class="wind-btn"        data-wind="LH">LH</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Name & Mobile -->
+        <div class="calc-user-row">
+          <div>
+            <div class="cuf-label">Full Name <span class="req">*</span></div>
+            <input class="cuf-input" id="cuf-name" type="text" placeholder="e.g. Ramesh Sharma" autocomplete="name"/>
+            <div class="cuf-error" id="err-cuf-name">Please enter your name.</div>
+          </div>
+          <div>
+            <div class="cuf-label">Mobile Number <span class="req">*</span></div>
+            <input class="cuf-input" id="cuf-mobile" type="tel" placeholder="10-digit number" maxlength="10" inputmode="numeric" autocomplete="tel"/>
+            <div class="cuf-error" id="err-cuf-mobile">Enter valid 10-digit mobile number.</div>
+          </div>
+        </div>
+
+        <!-- Calculate + Reset -->
+        <div class="calc-actions">
+          <button class="btn-calc-go"    id="calc-go-btn"    type="button">Calculate</button>
+          <button class="btn-calc-reset" id="calc-reset-btn" type="button">Reset Form</button>
+        </div>
+
+        <!-- RESULT PANEL — wrapped in .calc-result-wrap so it is never clipped -->
+        <div class="calc-result-wrap">
+          <div class="calc-result" id="calc-result" role="status" aria-live="polite">
+            <div class="result-lbl">Spring Rate (k)</div>
+            <div class="result-val" id="result-val">—</div>
+            <div class="result-sub" id="result-sub">Result will appear here</div>
+          </div>
+        </div>
+
+        <!-- Status / save feedback -->
+        <div class="calc-status" id="calc-status" role="alert" aria-live="assertive"></div>
+
+      </div><!-- /calc-card -->
+    </div><!-- /calc-layout -->
+  </div>
+</section>
+<!-- ===== CALCULATOR SECTION END ===== -->
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai</span>
+      </div>
+      <p class="footer-copy">© 2025 Gurudatta Trading Co. All rights reserved.<br>Mild Steel Springs Manufacturer &amp; Supplier, Mumbai, India.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="products.html">Products</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   calculator.html — Fixed JavaScript
+   Bugs fixed:
+   1. hideResult() was targeting wrong element (cat-tabs)
+   2. renderCatTabs/renderProducts ran even when elements absent
+   3. modal/contact event listeners crashed when elements absent
+   4. hamburger double-binding removed
+   ============================================================ */
+
+/* ===== CONFIG ===== */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyt1jfV9unDoQDjgtcHkF8uBksJSXj__ioIw4H3OqoUNcTqq6ifkU7iztBZIQPmoIo/exec';
+
+const G_MAP = {
+  'Music Wire ASTM A228': 81500,
+  'Hard Drawn Wire ASTM A227': 80000,
+  'Chrome Vanadium ASTM A232': 80000,
+  'Stainless Steel ASTM A313': 68900,
+  'Phosphor Bronze ASTM B197': 41370,
+  'Mild Steel IS 4454': 79300,
+};
+const INACTIVE_COILS = { C: 2, CG: 2, DC: 2, O: 0 };
+
+/* ===== HEADER SCROLL ===== */
+const siteHeader = document.getElementById('site-header');
+if (siteHeader) {
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+
+/* ===== HAMBURGER ===== */
+const hbtn      = document.getElementById('hbtn');
+const mobDrawer = document.getElementById('mob-drawer');
+if (hbtn && mobDrawer) {
+  hbtn.addEventListener('click', () => {
+    const open = mobDrawer.classList.toggle('open');
+    hbtn.setAttribute('aria-expanded', open);
+    mobDrawer.setAttribute('aria-hidden', !open);
+  });
+  document.querySelectorAll('.mdlink').forEach(l => {
+    l.addEventListener('click', () => {
+      mobDrawer.classList.remove('open');
+      hbtn.setAttribute('aria-expanded', false);
+    });
+  });
+}
+
+/* ===== CALCULATOR STATE ===== */
+const calcState = {
+  springType: 'compression',
+  unit:       'english',
+  endType:    'C',
+  windDir:    'RH',
+  fieldModes: { wd: 'exact', od: 'exact', fl: 'exact', tc: 'exact' },
+};
+
+/* ===== UNIT LABELS ===== */
+function updateUnitLabels() {
+  const u = calcState.unit === 'english' ? '(IN)' : '(mm)';
+  ['lbl-wd','lbl-od','lbl-fl'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = u;
+  });
+}
+updateUnitLabels();
+
+/* ===== FIELD MODE (Exact / Range) ===== */
+function applyFieldMode(field, mode) {
+  calcState.fieldModes[field] = mode;
+  const dash   = document.getElementById(field + '-dash');
+  const maxInp = document.getElementById(field + '-max');
+  if (dash && maxInp) {
+    const isRange = mode === 'range';
+    dash.style.display   = isRange ? 'inline' : 'none';
+    maxInp.style.display = isRange ? 'block'  : 'none';
+    if (!isRange) maxInp.value = '';
+  }
+}
+
+/* ===== RESULT PANEL ===== */
+function hideResult() {
+  /* FIX: target the correct element — calc-result, not cat-tabs */
+  const el = document.getElementById('calc-result');
+  if (el) {
+    el.classList.remove('show');
+    el.innerHTML = '';
+  }
+  hideCalcStatus();
+}
+
+function showCalcStatus(msg, type) {
+  const s = document.getElementById('calc-status');
+  if (!s) return;
+  s.textContent = msg;
+  s.className   = 'calc-status show ' + type;
+}
+function hideCalcStatus() {
+  const s = document.getElementById('calc-status');
+  if (!s) return;
+  s.className = 'calc-status';
+  s.textContent = '';
+}
+
+/* ===== VALIDATION ===== */
+function validateUserFields() {
+  let ok = true;
+  const nameEl = document.getElementById('cuf-name');
+  const mobEl  = document.getElementById('cuf-mobile');
+  const nErr   = document.getElementById('err-cuf-name');
+  const mErr   = document.getElementById('err-cuf-mobile');
+  if (nameEl.value.trim().length < 2) {
+    nameEl.classList.add('err'); nErr.classList.add('show'); ok = false;
+  } else { nameEl.classList.remove('err'); nErr.classList.remove('show'); }
+  if (!/^\d{10}$/.test(mobEl.value.trim())) {
+    mobEl.classList.add('err'); mErr.classList.add('show'); ok = false;
+  } else { mobEl.classList.remove('err'); mErr.classList.remove('show'); }
+  return ok;
+}
+
+function validateParamFields() {
+  let ok = true;
+  ['wd-min','od-min','tc-min'].forEach(id => {
+    const el  = document.getElementById(id);
+    const val = parseFloat(el.value);
+    if (isNaN(val) || val <= 0) { el.classList.add('err'); ok = false; }
+    else { el.classList.remove('err'); }
+  });
+  return ok;
+}
+
+/* ===== UNIT CONVERSION ===== */
+function toMM(v)    { return calcState.unit === 'english' ? v * 25.4 : v; }
+function fmt(n, d)  { return Number(n).toFixed(d ?? 4); }
+
+/* ===== SPRING CALCULATION ENGINE ===== */
+function computeAllResults(p) {
+  const { d, OD, freeLength, totalCoils, G, endType, springType, unit, materialName, windDir } = p;
+  const ID    = OD - 2 * d;
+  const D     = OD - d;
+  const C     = D / d;
+  const inact = INACTIVE_COILS[endType] ?? 2;
+  const Na    = Math.max(totalCoils - inact, 0.5);
+  if (d <= 0 || D <= 0 || Na <= 0 || C < 1) return null;
+
+  const k       = (G * Math.pow(d, 4)) / (8 * Math.pow(D, 3) * Na);
+  const Ls      = endType === 'O' ? totalCoils * d : (totalCoils + 1) * d;
+  const maxTrav = Math.max(freeLength - Ls, 0);
+  const maxLoad = k * maxTrav;
+  const Kw      = ((4*C - 1) / (4*C - 4)) + (0.615 / C);
+  const tau     = maxLoad > 0 ? Kw * (8 * maxLoad * D) / (Math.PI * Math.pow(d, 3)) : 0;
+  const pitch   = totalCoils > 1 ? (freeLength - (endType === 'O' ? 0 : 2*d)) / (totalCoils - 1) : d;
+  const wireLen = Math.PI * D * totalCoils;
+  const mass_g  = (Math.PI / 4) * d * d * wireLen * 7.85e-6 * 1000;
+
+  const en = unit === 'english';
+  const dL = mm  => en ? fmt(mm / 25.4) + ' IN'    : fmt(mm, 3)  + ' mm';
+  const dR = r   => en ? fmt(r * 5.710) + ' lb/in' : fmt(r, 4)   + ' N/mm';
+  const dF = n   => en ? fmt(n * 0.2248)+ ' lb'    : fmt(n, 3)   + ' N';
+  const dS = mpa => fmt(mpa, 2) + ' MPa';
+
+  const loadTable = [0, 0.25, 0.50, 0.75, 1.0].map(pct => ({
+    pct:    Math.round(pct * 100) + '%',
+    travel: dL(pct * maxTrav),
+    height: dL(freeLength - pct * maxTrav),
+    load:   dF(k * pct * maxTrav),
+  }));
+
+  return {
+    wireDia: dL(d), outerDia: dL(OD), innerDia: dL(ID), meanDia: dL(D),
+    freeLen: dL(freeLength), solidHeight: dL(Ls), pitch: dL(pitch),
+    wireLength: dL(wireLen), weight: fmt(mass_g, 3) + ' g',
+    totalCoils: fmt(totalCoils, 1), activeCoils: fmt(Na, 1),
+    inactiveCoils: fmt(inact, 0), endType, windDir, material: materialName, springType,
+    springRate: dR(k), maxTravel: dL(maxTrav), maxLoad: dF(maxLoad),
+    springIndex: fmt(C, 2), wahlFactor: fmt(Kw, 4), maxStress: dS(tau),
+    loadTable,
+    raw: { k, Ls, maxTrav, maxLoad, C, Kw, tau, wireLen, mass_g },
+  };
+}
+
+/* ===== REPORT HTML BUILDER ===== */
+function buildReportHTML(r, name, mobile) {
+  const tl = r.springType.charAt(0).toUpperCase() + r.springType.slice(1);
+  const row = (lbl, val, hi=false) =>
+    `<div class="rpt-row${hi?' rpt-hi':''}"><span class="rpt-lbl">${lbl}</span><span class="rpt-val">${val}</span></div>`;
+  const tr = t =>
+    `<tr><td>${t.pct}</td><td>${t.travel}</td><td>${t.height}</td><td>${t.load}</td></tr>`;
+  return `
+<div class="rpt-card">
+  <div class="rpt-header">
+    <div>
+      <div class="rpt-tag">${tl} Spring — Calculation Report</div>
+      <div class="rpt-customer"><span>👤 ${name}</span><span>📞 ${mobile}</span></div>
+    </div>
+    <div class="rpt-header-r">
+      <div class="rpt-date">${new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})}</div>
+      <div class="rpt-brand">GURUDATTA TRADING CO.</div>
+    </div>
+  </div>
+  <div class="rpt-hero">
+    <div class="rpt-hero-item"><div class="rpt-hero-lbl">Spring Rate (k)</div><div class="rpt-hero-val">${r.springRate}</div></div>
+    <div class="rpt-hero-item"><div class="rpt-hero-lbl">Max Safe Travel</div><div class="rpt-hero-val">${r.maxTravel}</div></div>
+    <div class="rpt-hero-item"><div class="rpt-hero-lbl">Max Safe Load</div><div class="rpt-hero-val">${r.maxLoad}</div></div>
+  </div>
+  <div class="rpt-cols">
+    <div class="rpt-section">
+      <div class="rpt-sec-title">📐 Dimensions</div>
+      ${row('Wire Diameter (d)', r.wireDia)}
+      ${row('Outer Diameter (OD)', r.outerDia)}
+      ${row('Inner Diameter (ID)', r.innerDia)}
+      ${row('Mean Coil Dia (D)', r.meanDia)}
+      ${row('Free Length (L₀)', r.freeLen)}
+      ${row('Solid Height (Ls)', r.solidHeight)}
+      ${row('Pitch', r.pitch)}
+      ${row('Total Wire Length', r.wireLength)}
+      ${row('Est. Weight', r.weight)}
+    </div>
+    <div class="rpt-section">
+      <div class="rpt-sec-title">⚙️ Specifications</div>
+      ${row('Total Coils (N)', r.totalCoils)}
+      ${row('Active Coils (Na)', r.activeCoils)}
+      ${row('Inactive Coils', r.inactiveCoils)}
+      ${row('Spring Index (C)', r.springIndex)}
+      ${row('Wahl Factor (Kw)', r.wahlFactor)}
+      ${row('Max Shear Stress (τ)', r.maxStress, true)}
+      ${row('End Type', r.endType)}
+      ${row('Wind Direction', r.windDir)}
+      ${row('Material', r.material)}
+    </div>
+  </div>
+  <div class="rpt-section rpt-table-section">
+    <div class="rpt-sec-title">📊 Load vs Travel Table</div>
+    <div class="rpt-table-wrap">
+      <table class="rpt-table">
+        <thead><tr><th>Travel %</th><th>Deflection</th><th>Loaded Height</th><th>Load</th></tr></thead>
+        <tbody>${r.loadTable.map(tr).join('')}</tbody>
+      </table>
+    </div>
+  </div>
+  <div class="rpt-note">⚠️ Theoretical estimates ±10%. Verify with a qualified engineer before manufacturing. Contact <strong>Gurudatta Trading Co.</strong> for custom manufacturing — Mumbai.</div>
+</div>`;
+}
+
+/* ===== TAB / UNIT / BADGE / BUTTON EVENT BINDINGS ===== */
+
+/* Spring type tabs */
+document.querySelectorAll('.calc-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.calc-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    calcState.springType = tab.dataset.type;
+    hideResult();
+  });
+});
+
+/* English / Metric toggle */
+document.querySelectorAll('.unit-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.unit-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    calcState.unit = btn.dataset.unit;
+    updateUnitLabels();
+    hideResult();
+  });
+});
+
+/* Exact / Range badges */
+document.querySelectorAll('.db').forEach(badge => {
+  badge.addEventListener('click', () => {
+    const field = badge.dataset.field;
+    const mode  = badge.dataset.mode;
+    document.querySelectorAll(`.db[data-field="${field}"]`).forEach(b => b.classList.remove('active'));
+    badge.classList.add('active');
+    applyFieldMode(field, mode);
+  });
+});
+
+/* End-type buttons */
+document.querySelectorAll('.end-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.end-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    calcState.endType = btn.dataset.end;
+  });
+});
+
+/* Wind-direction buttons */
+document.querySelectorAll('.wind-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.wind-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    calcState.windDir = btn.dataset.wind;
+  });
+});
+
+/* Mobile — digits only */
+const mobInput = document.getElementById('cuf-mobile');
+if (mobInput) {
+  mobInput.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '').slice(0, 10);
+  });
+}
+
+/* Reset button */
+const resetBtn = document.getElementById('calc-reset-btn');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    ['wd-min','wd-max','od-min','od-max','fl-min','fl-max','tc-min','tc-max'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    const nameEl = document.getElementById('cuf-name');
+    const mobEl  = document.getElementById('cuf-mobile');
+    if (nameEl) nameEl.value = '';
+    if (mobEl)  mobEl.value  = '';
+    document.querySelectorAll('.cparam-input, .cuf-input').forEach(el => el.classList.remove('err'));
+    hideResult();
+  });
+}
+
+/* ===== CALCULATE BUTTON ===== */
+const calcGoBtn = document.getElementById('calc-go-btn');
+if (calcGoBtn) {
+  calcGoBtn.addEventListener('click', async () => {
+    hideResult();
+
+    const userOk  = validateUserFields();
+    const paramOk = validateParamFields();
+    if (!userOk || !paramOk) {
+      showCalcStatus('⚠️ Please fill all required fields correctly before calculating.', 'ng');
+      return;
+    }
+
+    const wdRaw = parseFloat(document.getElementById('wd-min').value);
+    const odRaw = parseFloat(document.getElementById('od-min').value);
+    const flRaw = parseFloat(document.getElementById('fl-min').value) || 0;
+    const tcRaw = parseFloat(document.getElementById('tc-min').value);
+    const mat   = document.getElementById('material-type').value;
+    const G     = G_MAP[mat] || 81000;
+    const name  = document.getElementById('cuf-name').value.trim();
+    const mob   = document.getElementById('cuf-mobile').value.trim();
+
+    const d_mm  = toMM(wdRaw);
+    const od_mm = toMM(odRaw);
+    const fl_mm = flRaw > 0 ? toMM(flRaw) : od_mm * 3;
+
+    if (od_mm <= d_mm) {
+      document.getElementById('od-min').classList.add('err');
+      showCalcStatus('⚠️ Outer Diameter must be greater than Wire Diameter.', 'ng');
+      return;
+    }
+
+    const results = computeAllResults({
+      d: d_mm, OD: od_mm, freeLength: fl_mm, totalCoils: tcRaw,
+      G, endType: calcState.endType, springType: calcState.springType,
+      unit: calcState.unit, materialName: mat, windDir: calcState.windDir,
+    });
+
+    if (!results) {
+      showCalcStatus('⚠️ Calculation failed. Check input values.', 'ng');
+      return;
+    }
+
+    const resultEl = document.getElementById('calc-result');
+    resultEl.innerHTML = buildReportHTML(results, name, mob);
+    resultEl.classList.add('show');
+    setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+
+    calcGoBtn.disabled  = true;
+    calcGoBtn.innerHTML = '<span class="spinner"></span> Saving…';
+
+    const payload = {
+      action: 'calculator', name, mobile: mob,
+      springType: calcState.springType, unit: calcState.unit,
+      wireDiameter: wdRaw, outerDiameter: odRaw, freeLength: flRaw,
+      totalCoils: tcRaw, material: mat, endType: calcState.endType,
+      windDir: calcState.windDir,
+      springRate: results.springRate, solidHeight: results.solidHeight,
+      maxTravel: results.maxTravel, maxLoad: results.maxLoad,
+      springIndex: results.springIndex, wahlFactor: results.wahlFactor,
+      maxShearStress: results.maxStress, totalWireLength: results.wireLength,
+      estimatedWeight: results.weight,
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+    };
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST', headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload), mode: 'no-cors',
+      });
+      showCalcStatus('✅ Report saved! Our team will contact you shortly.', 'ok');
+    } catch (err) {
+      showCalcStatus('⚠️ Report shown but could not save — check your connection.', 'ng');
+    } finally {
+      calcGoBtn.disabled  = false;
+      calcGoBtn.innerHTML = 'Calculate';
+    }
+  });
+}
+
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

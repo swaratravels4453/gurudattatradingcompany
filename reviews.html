@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5"/>
+<title>Customer Reviews | Gurudatta Trading Co. Mumbai</title>
+<meta name="description" content="Read 1000+ customer reviews for Gurudatta Trading Co. — Trusted spring manufacturer from Mumbai with 25+ years experience."/>
+<meta name="keywords" content="Gurudatta Trading Co reviews, spring manufacturer reviews Mumbai, customer testimonials spring supplier India"/>
+<meta name="author" content="Gurudatta Trading Co."/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="IN-MH"/>
+<meta name="geo.placename" content="Mumbai, Maharashtra"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Customer Reviews | Gurudatta Trading Co."/>
+<meta property="og:description" content="Read 1000+ customer reviews for Gurudatta Trading Co. — Trusted spring manufacturer from Mumbai with 25+ years experience."/>
+<meta property="og:image" content="https://2.wlimg.com/company_logo/13516914.jpg"/>
+<meta property="og:site_name" content="Gurudatta Trading Co."/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"LocalBusiness",
+  "name":"Gurudatta Trading Co.",
+  "description":"Mild Steel Springs Manufacturer and Supplier from Mumbai, India.",
+  "url":"https://www.gurudattatradingco.in",
+  "telephone":"+918454995315",
+  "email":"gurudattatradingco@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   GURUDATTA TRADING CO. — styles.css
+   Sections:
+     1.  Variables & Reset
+     2.  Utility Classes
+     3.  Header
+     4.  Hero
+     5.  Calculator (SpringCreator-style)
+     6.  Products + Modal
+     7.  Testimonials
+     8.  Contact
+     9.  Footer
+    10.  Mobile Bottom Nav
+    11.  Keyframe Animations
+    12.  Responsive Breakpoints
+   ============================================================ */
+
+/* ===== 1. VARIABLES & RESET ===== */
+:root {
+  --navy:        #0a0f1e;
+  --navy-mid:    #0d1630;
+  --navy-light:  #152040;
+  --steel:       #1e2d4a;
+  --steel-mid:   #263556;
+  --accent:      #f0a500;
+  --accent-dim:  #c78a00;
+  --highlight:   #3b8bff;
+  --teal:        #0d5c7a;
+  --teal-dark:   #0a4a62;
+  --teal-pale:   #e8f4fb;
+  --white:       #ffffff;
+  --offwhite:    #e8edf5;
+  --grey:        #8a9ab8;
+  --grey-light:  #b0bdd4;
+  --border:      rgba(255, 255, 255, 0.08);
+  --card-bg:     rgba(21, 32, 64, 0.92);
+  --radius:      10px;
+  --tr:          0.24s ease;
+  --ff-d:        'Barlow Condensed', sans-serif;
+  --ff-b:        'Barlow', sans-serif;
+  --ff-a:        'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-b);
+  background: var(--navy);
+  color: var(--offwhite);
+  overflow-x: hidden;
+  padding-bottom: 72px; /* space for mobile bottom nav */
+}
+
+/* ===== 2. UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section label (small caps above title) */
+.sec-label {
+  display: block;
+  font-family: var(--ff-a);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* Section heading */
+.sec-title {
+  font-family: var(--ff-d);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+/* Section sub-paragraph */
+.sec-sub {
+  font-size: 1rem;
+  color: var(--grey-light);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Shared button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-a);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--tr);
+  text-decoration: none;
+}
+.btn-primary { background: var(--accent); color: var(--navy); }
+.btn-primary:hover { background: var(--accent-dim); transform: translateY(-2px); box-shadow: 0 0 20px rgba(240,165,0,0.3); }
+.btn-outline  { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+.btn-outline:hover  { background: var(--accent); color: var(--navy); transform: translateY(-2px); }
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Dark-theme shared form fields (used in Contact section) */
+.field-group    { margin-bottom: 16px; }
+.field-label    { display: block; font-family: var(--ff-a); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 6px; }
+.field-label .req { color: var(--accent); }
+.field-input    { width: 100%; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 11px 14px; font-family: var(--ff-b); font-size: 14px; color: var(--white); transition: all var(--tr); outline: none; }
+.field-input::placeholder { color: rgba(255,255,255,0.22); }
+.field-input:focus  { border-color: var(--accent); background: rgba(240,165,0,0.05); box-shadow: 0 0 0 3px rgba(240,165,0,0.1); }
+.field-input.err    { border-color: #e74c3c; }
+.field-error        { font-size: 11px; color: #e74c3c; margin-top: 4px; display: none; }
+.field-error.show   { display: block; }
+
+
+/* ============================= */
+/* ===== 3. HEADER SECTION ===== */
+/* ============================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 30, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--tr);
+}
+header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
+/* Inner flex row */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+
+/* Logo */
+.logo { text-decoration: none; display: flex; flex-direction: column; }
+.logo-name { font-family: var(--ff-d); font-weight: 900; font-size: 18px; color: var(--white); letter-spacing: 1px; line-height: 1; }
+.logo-name span { color: var(--accent); }
+.logo-tag  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 2px; color: var(--grey); text-transform: uppercase; margin-top: 2px; }
+
+/* Desktop navigation links */
+nav { display: flex; gap: 2px; }
+nav a { font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 8px 15px; border-radius: 6px; transition: all var(--tr); }
+nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1); }
+
+/* Hamburger toggle button */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--offwhite); border-radius: 2px; transition: all var(--tr); }
+
+/* Mobile nav drawer */
+.mob-drawer { display: none; flex-direction: column; background: var(--navy-mid); border-top: 1px solid var(--border); padding: 12px 0; }
+.mob-drawer a { font-family: var(--ff-a); font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 13px 24px; border-bottom: 1px solid var(--border); transition: color var(--tr); }
+.mob-drawer a:hover { color: var(--accent); }
+.mob-drawer.open { display: flex; }
+
+
+/* ============================= */
+/* ===== 4. HERO SECTION ===== */
+/* ============================= */
+#home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 66px;
+  overflow: hidden;
+}
+
+/* Subtle grid background lines */
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,139,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,139,255,0.035) 1px, transparent 1px);
+  background-size: 55px 55px;
+  pointer-events: none;
+}
+
+/* Radial glow orbs */
+.hero-glow1 { position: absolute; top: 15%; right: 3%; width: 480px; height: 480px; background: radial-gradient(circle, rgba(240,165,0,0.11) 0%, transparent 70%); pointer-events: none; }
+.hero-glow2 { position: absolute; bottom: 5%; left: -80px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(59,139,255,0.09) 0%, transparent 70%); pointer-events: none; }
+
+/* Decorative spring SVG (desktop only) */
+.hero-spring { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44%; max-width: 540px; opacity: 0.8; pointer-events: none; }
+
+/* Hero content block */
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+
+/* Animated top badge */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.28);
+  border-radius: 50px; padding: 5px 16px;
+  font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+
+/* Main H1 */
+.hero-h1 { font-family: var(--ff-d); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 18px; animation: fadeUp 0.6s 0.15s ease both; }
+.hero-h1 .acc { color: var(--accent); }
+.hero-h1 .hl  { color: var(--highlight); }
+
+/* Subheadline */
+.hero-sub { font-size: 1.05rem; color: var(--grey-light); line-height: 1.75; margin-bottom: 32px; animation: fadeUp 0.6s 0.28s ease both; }
+
+/* CTA buttons row */
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
+
+/* Stats strip */
+.hero-stats { display: flex; gap: 28px; margin-top: 50px; padding-top: 28px; border-top: 1px solid var(--border); animation: fadeUp 0.6s 0.52s ease both; flex-wrap: wrap; }
+.stat-num { font-family: var(--ff-d); font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.stat-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-top: 3px; }
+
+
+/* ============================================================ */
+/* ===== 5. CALCULATOR SECTION (SpringCreator-style) ===== */
+/* ============================================================ */
+#calculator {
+  background: var(--navy-mid);
+  padding: 90px 0 100px;
+  position: relative;
+}
+/* Accent top line */
+#calculator::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Two-column layout */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 52px;
+  align-items: start;
+}
+.calc-intro .sec-sub { margin-bottom: 24px; }
+
+/* Feature list on the left */
+.calc-feature-list { list-style: none; margin-top: 22px; }
+.calc-feature-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13.5px; color: var(--grey-light);
+  margin-bottom: 13px; line-height: 1.55;
+}
+.calc-feature-list li .ck {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background: rgba(240,165,0,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 11px; margin-top: 1px;
+}
+
+/* ---- Main white calculator card ---- */
+.calc-card {
+  background: var(--white);
+  border-radius: 14px;
+  /* IMPORTANT: no overflow:hidden — prevents result panel from being clipped */
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Dark teal header bar */
+.calc-header {
+  background: var(--teal);
+  padding: 18px 24px;
+  text-align: center;
+  border-radius: 14px 14px 0 0;
+}
+.calc-header h2 {
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.4rem; letter-spacing: 2px;
+  color: var(--white); text-transform: uppercase;
+}
+
+/* Spring type tabs */
+.calc-tabs-row {
+  padding: 16px 20px 0;
+  background: var(--white);
+}
+.calc-tabs-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.calc-tabs-label, .unit-label {
+  font-size: 12px;
+  color: #555;
+  font-family: var(--ff-b);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Three spring-type tab buttons */
+.calc-tabs {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+.calc-tab {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 6px;
+  border: 1.5px solid #c8d8e0; border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase;
+  color: #444; background: var(--white);
+  transition: all var(--tr);
+  white-space: nowrap;
+}
+.calc-tab svg { width: 20px; height: 20px; flex-shrink: 0; }
+.calc-tab.active                { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.calc-tab:not(.active):hover    { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* English / Metric toggle */
+.unit-wrap { flex-shrink: 0; }
+.unit-btns {
+  display: flex;
+  border: 1.5px solid #c8d8e0; border-radius: 6px; overflow: hidden;
+}
+.unit-btn {
+  padding: 7px 16px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 12px; letter-spacing: 1px;
+  cursor: pointer; border: none;
+  background: var(--white); color: #444;
+  transition: all var(--tr);
+}
+.unit-btn.active              { background: var(--teal); color: var(--white); }
+.unit-btn:not(.active):hover  { background: var(--teal-pale); color: var(--teal); }
+
+/* Info / hint banner */
+.calc-banner {
+  margin: 10px 20px 0;
+  background: var(--teal-pale);
+  border: 1px solid #c0dce8;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px; color: #2d5a6e; line-height: 1.6; text-align: center;
+}
+.calc-banner strong { color: var(--teal); }
+
+/* ---- 4-column parameter inputs ---- */
+.calc-params {
+  padding: 14px 20px 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Single parameter column */
+.cparam { display: flex; flex-direction: column; gap: 4px; }
+
+/* Label above each field */
+.cparam-label {
+  font-size: 10.5px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); line-height: 1.3;
+}
+.cparam-label .unit-hint { font-size: 10px; color: #888; font-weight: 400; }
+
+/* Exact / Range badges */
+.design-badge { display: flex; gap: 4px; }
+.design-badge .db {
+  font-size: 10px;
+  background: var(--teal-pale); border: 1px solid var(--teal);
+  color: var(--teal); padding: 2px 7px; border-radius: 3px;
+  cursor: pointer; font-family: var(--ff-a); font-weight: 600;
+  transition: all var(--tr);
+}
+.design-badge .db.active { background: var(--teal); color: var(--white); }
+
+/* Input row inside a param (min — max) */
+.cparam-inputs { display: flex; align-items: center; gap: 4px; }
+.cparam-input {
+  flex: 1; min-width: 0;
+  padding: 8px 8px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 13px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cparam-input:focus  { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cparam-input.err    { border-color: #e74c3c; }
+.cparam-dash  { color: #aaa; font-size: 13px; flex-shrink: 0; }
+.cparam-unit  { font-size: 10px; color: #666; font-family: var(--ff-b); font-weight: 600; flex-shrink: 0; }
+.cparam-sub   { font-size: 9.5px; color: #bbb; text-align: center; font-family: var(--ff-b); margin-top: 1px; }
+
+/* ---- Material / End-type / Wind-direction row ---- */
+.calc-extra {
+  padding: 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+  gap: 14px;
+  align-items: start;
+}
+.cextra-label {
+  font-size: 11px; font-weight: 600; color: #444;
+  font-family: var(--ff-b); margin-bottom: 6px;
+}
+.cextra-select {
+  width: 100%; padding: 9px 10px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 12px; font-family: var(--ff-b); color: #111;
+  background: var(--white); outline: none;
+  transition: border var(--tr);
+}
+.cextra-select:focus { border-color: var(--teal); }
+
+/* End-type & wind-direction toggle buttons */
+.end-btns, .wind-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+.end-btn, .wind-btn {
+  padding: 7px 11px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-family: var(--ff-a); font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all var(--tr);
+  background: var(--white); color: #444;
+}
+.end-btn.active, .wind-btn.active               { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.end-btn:not(.active):hover, .wind-btn:not(.active):hover { background: var(--teal-pale); border-color: var(--teal); color: var(--teal); }
+
+/* ---- Name & Mobile fields (grey strip) ---- */
+.calc-user-row {
+  background: #f5f8fa;
+  border-top: 1px solid #d8e8ef;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.cuf-label { font-size: 11px; font-weight: 600; color: #555; font-family: var(--ff-b); margin-bottom: 5px; }
+.cuf-label .req { color: #e74c3c; }
+.cuf-input {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid #c8d8e0; border-radius: 6px;
+  font-size: 14px; font-family: var(--ff-b); color: #111;
+  outline: none; background: var(--white);
+  transition: border var(--tr);
+}
+.cuf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(13,92,122,0.12); }
+.cuf-input.err   { border-color: #e74c3c; }
+.cuf-error       { font-size: 11px; color: #e74c3c; margin-top: 3px; display: none; }
+.cuf-error.show  { display: block; }
+
+/* ---- Calculate / Reset buttons ---- */
+.calc-actions {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px 20px;
+  justify-content: center;
+}
+.btn-calc-go {
+  flex: 1.5;
+  background: #5a9e2f; border: none; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-d); font-weight: 800;
+  font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--white); cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-go:hover   { background: #4a8422; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(90,158,47,0.35); }
+.btn-calc-go:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+.btn-calc-reset {
+  flex: 0.8;
+  background: transparent; border: 1.5px solid #c8d8e0; border-radius: 8px;
+  padding: 14px;
+  font-family: var(--ff-a); font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  color: #666; cursor: pointer;
+  transition: all var(--tr);
+}
+.btn-calc-reset:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-pale); }
+
+/* ---- Result display panel (FIXED: outside overflow, always visible) ---- */
+.calc-result-wrap {
+  padding: 0 20px 20px;
+  /* This wrapper lives INSIDE .calc-card but after the actions */
+}
+.calc-result {
+  display: none; /* JS adds .show to reveal */
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: center;
+  animation: fadeUp 0.35s ease both;
+}
+.calc-result.show { display: block; }
+
+.result-lbl { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+.result-val { font-family: var(--ff-d); font-size: 2.4rem; font-weight: 900; color: var(--white); line-height: 1; }
+.result-sub { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px; }
+
+/* Status message below result */
+.calc-status {
+  display: none;
+  margin: 8px 20px 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-family: var(--ff-a);
+}
+.calc-status.show { display: block; }
+.calc-status.ok   { background: rgba(39,174,96,0.12); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.calc-status.ng   { background: rgba(231,76,60,0.10); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 6. PRODUCTS + MODAL ===== */
+/* ============================= */
+#products { background: var(--navy); padding: 90px 0; }
+
+/* Section header with "full catalogue" link */
+.prod-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Category filter tabs row */
+.cat-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.cat-tab {
+  font-family: var(--ff-a); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border);
+  color: var(--grey); cursor: pointer;
+  background: none;
+  transition: all var(--tr);
+}
+.cat-tab:hover          { border-color: rgba(240,165,0,0.4); color: var(--accent); }
+.cat-tab.active         { background: var(--accent); border-color: var(--accent); color: var(--navy); }
+
+/* Products grid */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Single product card */
+.prod-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--tr);
+}
+.prod-card:hover { transform: translateY(-5px); border-color: rgba(240,165,0,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+
+/* Image wrapper */
+.prod-img       { position: relative; height: 180px; overflow: hidden; background: var(--steel); }
+.prod-img img   { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.prod-card:hover .prod-img img { transform: scale(1.07); }
+
+/* Category badge on image */
+.prod-cat-badge {
+  position: absolute; bottom: 8px; left: 8px;
+  background: rgba(13,92,122,0.88); color: var(--white);
+  font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+}
+
+/* Card text body */
+.prod-body   { padding: 14px; }
+.prod-name   { font-family: var(--ff-d); font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 8px; }
+.prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.prod-enquire { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+.prod-view    { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--highlight); }
+
+/* Skeleton loader card */
+.skel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.skel-img { height: 180px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; }
+.skel-body { padding: 14px; }
+.skel-line { height: 12px; border-radius: 4px; background: linear-gradient(90deg, var(--steel) 25%, var(--steel-mid) 50%, var(--steel) 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; margin-bottom: 8px; }
+.skel-line.sh { width: 55%; }
+
+/* ---- Product Detail Modal ---- */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%; max-width: 700px;
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: rgba(255,255,255,0.1); border: none;
+  color: var(--white); font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr); z-index: 1;
+}
+.modal-close:hover { background: rgba(255,255,255,0.22); }
+.modal-img         { width: 100%; height: 260px; object-fit: cover; border-radius: 12px 12px 0 0; }
+.modal-body        { padding: 26px; }
+.modal-cat         { font-family: var(--ff-a); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+.modal-title       { font-family: var(--ff-d); font-size: 1.8rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.modal-desc        { font-size: 14px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.modal-specs       { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+.modal-spec        { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
+.modal-spec-label  { font-family: var(--ff-a); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 3px; }
+.modal-spec-val    { font-size: 13px; color: var(--offwhite); font-weight: 500; }
+.modal-actions     { display: flex; gap: 12px; flex-wrap: wrap; }
+.modal-actions .btn { flex: 1; justify-content: center; }
+
+
+/* ============================= */
+/* ===== 7. TESTIMONIALS ===== */
+/* ============================= */
+#testimonials {
+  background: var(--navy-mid);
+  padding: 90px 0;
+  position: relative;
+}
+#testimonials::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+}
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 48px; }
+.testi-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px; transition: all var(--tr); }
+.testi-card:hover { border-color: rgba(59,139,255,0.3); transform: translateY(-4px); }
+.testi-stars  { color: var(--accent); font-size: 13px; margin-bottom: 10px; }
+.testi-q      { font-family: Georgia, serif; font-size: 3.5rem; line-height: 0.5; color: var(--accent); opacity: 0.45; margin-bottom: 14px; }
+.testi-txt    { font-size: 13.5px; color: var(--grey-light); line-height: 1.75; margin-bottom: 20px; }
+.testi-author { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.testi-av     { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--ff-d); font-weight: 800; font-size: 0.95rem; color: var(--navy); flex-shrink: 0; }
+.testi-name   { font-family: var(--ff-a); font-weight: 600; font-size: 14px; color: var(--white); }
+.testi-role   { font-size: 12px; color: var(--grey); margin-top: 2px; }
+
+
+/* ============================= */
+/* ===== 8. CONTACT ===== */
+/* ============================= */
+#contact { background: var(--navy); padding: 90px 0; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+.contact-info { margin-top: 28px; }
+.cinfo-item  { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.cinfo-icon  { width: 44px; height: 44px; background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.2); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.cinfo-lbl   { font-family: var(--ff-a); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 2px; }
+.cinfo-val   { font-size: 14px; color: var(--offwhite); }
+.contact-form-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 36px; backdrop-filter: blur(10px); }
+.cform-title  { font-family: var(--ff-d); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+.cform-status { display: none; margin-top: 12px; padding: 10px 14px; border-radius: 7px; font-size: 13px; font-family: var(--ff-a); }
+.cform-status.show { display: block; }
+.cform-status.ok   { background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.cform-status.ng   { background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); color: #e74c3c; }
+
+
+/* ============================= */
+/* ===== 9. FOOTER ===== */
+/* ============================= */
+footer {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--border);
+  padding: 44px 0 24px;
+}
+.footer-inner  { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.footer-copy   { font-size: 12px; color: var(--grey); text-align: center; }
+.footer-links  { display: flex; gap: 18px; }
+.footer-links a { font-family: var(--ff-a); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--grey); text-decoration: none; transition: color var(--tr); }
+.footer-links a:hover { color: var(--accent); }
+
+
+/* ============================= */
+/* ===== 10. MOBILE BOTTOM NAV ===== */
+/* ============================= */
+.bnav {
+  display: none; /* shown via media query on mobile */
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(10,15,30,0.97);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 6px 0 env(safe-area-inset-bottom, 6px);
+}
+.bnav-inner { display: flex; justify-content: space-around; }
+.bnav-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  color: var(--grey); background: none; border: none;
+  padding: 6px 12px; border-radius: 8px;
+  cursor: pointer; font-family: inherit;
+  transition: color var(--tr);
+}
+.bnav-btn.active, .bnav-btn:hover { color: var(--accent); }
+.bnav-icon { font-size: 19px; }
+.bnav-lbl  { font-family: var(--ff-a); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+
+/* ============================= */
+/* ===== 11. KEYFRAME ANIMATIONS ===== */
+/* ============================= */
+@keyframes fadeUp   { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse    { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+@keyframes shimmer  { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes spin     { to { transform: rotate(360deg); } }
+@keyframes modalIn  { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+
+/* ============================= */
+/* ===== 12. RESPONSIVE ===== */
+/* ============================= */
+
+/* ---- Tablet ---- */
+@media (max-width: 1024px) {
+  .calc-layout { grid-template-columns: 1fr; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra  { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  nav          { display: none; }
+  .hamburger   { display: flex; }
+  /* Show fixed bottom nav */
+  .bnav        { display: block; }
+  /* Hero adjustments */
+  .hero-spring { display: none; }
+  .hero-stats  { gap: 16px; }
+  /* Layout stacking */
+  .contact-layout { grid-template-columns: 1fr; }
+  .prod-header    { flex-direction: column; align-items: flex-start; }
+  /* Calculator */
+  .calc-params  { grid-template-columns: repeat(2, 1fr); }
+  .calc-extra   { grid-template-columns: 1fr; }
+  .calc-user-row { grid-template-columns: 1fr; }
+  /* Modal specs */
+  .modal-specs { grid-template-columns: 1fr; }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 480px) {
+  .hero-btns   { flex-direction: column; }
+  .testi-grid  { grid-template-columns: 1fr; }
+  .calc-tabs   { flex-direction: column; }
+  .calc-actions { flex-direction: column; }
+  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  .calc-tabs-meta { flex-direction: column; }
+}
+
+
+/* ============================================================
+   SPRING CALCULATION REPORT STYLES
+   (appended to styles.css)
+   ============================================================ */
+
+/* Result panel — overridden to fit full report */
+.calc-result {
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeUp 0.4s ease both;
+}
+.calc-result.show { display: block; }
+
+/* ---- Report card container ---- */
+.rpt-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--ff-b);
+  color: #111;
+}
+
+/* ---- Report header strip ---- */
+.rpt-header {
+  background: var(--teal);
+  padding: 14px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.rpt-tag {
+  font-family: var(--ff-d);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.rpt-customer {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+.rpt-header-r {
+  text-align: right;
+}
+.rpt-date {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2px;
+}
+.rpt-brand {
+  font-family: var(--ff-d);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* ---- 3 hero metric boxes ---- */
+.rpt-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f0f7fa;
+  border-bottom: 2px solid #d0e8f0;
+}
+.rpt-hero-item {
+  padding: 14px 16px;
+  text-align: center;
+  border-right: 1px solid #d0e8f0;
+}
+.rpt-hero-item:last-child { border-right: none; }
+.rpt-hero-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 4px;
+}
+.rpt-hero-val {
+  font-family: var(--ff-d);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+}
+
+/* ---- Two-column layout inside report ---- */
+.rpt-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #e0ecf0;
+}
+
+/* ---- Each section block ---- */
+.rpt-section {
+  padding: 14px 18px;
+  border-right: 1px solid #e0ecf0;
+}
+.rpt-section:last-child { border-right: none; }
+.rpt-table-section {
+  border-right: none;
+  border-top: 1px solid #e0ecf0;
+}
+
+/* Section heading */
+.rpt-sec-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #d0e8f0;
+}
+
+/* Each data row (label: value) */
+.rpt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f4f6;
+  font-size: 12px;
+  gap: 8px;
+}
+.rpt-row:last-child { border-bottom: none; }
+.rpt-lbl {
+  color: #555;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.rpt-val {
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+}
+/* Highlighted row (stress) */
+.rpt-hi .rpt-val { color: #c0392b; }
+.rpt-hi .rpt-lbl { color: #333; }
+
+/* ---- Load vs travel table ---- */
+.rpt-table-wrap { overflow-x: auto; }
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 300px;
+}
+.rpt-table thead tr {
+  background: var(--teal);
+  color: var(--white);
+}
+.rpt-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-family: var(--ff-a);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.rpt-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #e8f0f4;
+  color: #222;
+}
+.rpt-table tbody tr:nth-child(even) { background: #f5fafc; }
+.rpt-table tbody tr:hover { background: #e8f4fb; }
+
+/* ---- Disclaimer note ---- */
+.rpt-note {
+  padding: 10px 18px;
+  background: #fff8e1;
+  border-top: 1px solid #ffe082;
+  font-size: 11px;
+  color: #7a5c00;
+  line-height: 1.6;
+}
+
+/* ---- Responsive: stack columns on small screens ---- */
+@media (max-width: 600px) {
+  .rpt-cols         { grid-template-columns: 1fr; }
+  .rpt-section      { border-right: none; border-bottom: 1px solid #e0ecf0; }
+  .rpt-hero         { grid-template-columns: 1fr; }
+  .rpt-hero-item    { border-right: none; border-bottom: 1px solid #d0e8f0; }
+  .rpt-hero-val     { font-size: 1.1rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Gurudatta Trading Co.">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai, India</span>
+      </a>
+      <nav id="desk-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="calculator.html" class="nav-link">Calculator</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="reviews.html" class="nav-link active">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        
+      </nav>
+      <button class="hamburger" id="hbtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mob-drawer" id="mob-drawer" aria-hidden="true">
+      <a href="index.html" class="mdlink">Home</a>
+      <a href="calculator.html" class="mdlink">Calculator</a>
+      <a href="products.html" class="mdlink">Products</a>
+      <a href="reviews.html" class="mdlink">Reviews</a>
+      <a href="contact.html" class="mdlink">Contact</a>
+      
+    </div>
+  </div>
+</header>
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bnav" aria-label="Mobile bottom navigation">
+  <div class="bnav-inner">
+    <button class="bnav-btn" onclick="location.href='index.html'" aria-label="Home"><span class="bnav-icon">🏠</span><span class="bnav-lbl">Home</span></button>
+    <button class="bnav-btn" onclick="location.href='calculator.html'" aria-label="Calculator"><span class="bnav-icon">⚙️</span><span class="bnav-lbl">Calculator</span></button>
+    <button class="bnav-btn" onclick="location.href='products.html'" aria-label="Products"><span class="bnav-icon">🔩</span><span class="bnav-lbl">Products</span></button>
+    <button class="bnav-btn active" onclick="location.href='reviews.html'" aria-label="Reviews"><span class="bnav-icon">⭐</span><span class="bnav-lbl">Reviews</span></button>
+    <button class="bnav-btn" onclick="location.href='contact.html'" aria-label="Contact"><span class="bnav-icon">📞</span><span class="bnav-lbl">Contact</span></button>
+    
+  </div>
+</nav>
+
+
+<div style="padding-top:66px;"></div>
+<div style="background:var(--navy-mid);padding:40px 0 16px;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--highlight),transparent);"></div>
+  <div class="container">
+    <span class="sec-label">Customer Testimonials</span>
+    <h1 class="sec-title" style="font-size:clamp(1.8rem,4vw,2.6rem);">What Our Clients Say</h1>
+    <p class="sec-sub">Trusted by 1000+ businesses across India — from auto parts to textile machinery.</p>
+  </div>
+</div>
+
+<!-- Rating Summary Strip -->
+<section style="background:var(--navy);padding:40px 0;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--ff-d);font-size:3.5rem;font-weight:900;color:var(--accent);line-height:1;">4.9</div>
+        <div style="color:var(--accent);font-size:1.3rem;margin:4px 0;">★★★★★</div>
+        <div style="font-family:var(--ff-a);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);">Overall Rating</div>
+      </div>
+      <div style="width:1px;height:60px;background:var(--border);flex-shrink:0;"></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:200px;">
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;">
+          <span style="color:var(--grey);width:16px;">5★</span>
+          <div style="flex:1;height:6px;background:var(--steel);border-radius:3px;overflow:hidden;"><div style="width:90%;height:100%;background:var(--accent);border-radius:3px;"></div></div>
+          <span style="color:var(--grey-light);font-size:12px;">90%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;">
+          <span style="color:var(--grey);width:16px;">4★</span>
+          <div style="flex:1;height:6px;background:var(--steel);border-radius:3px;overflow:hidden;"><div style="width:8%;height:100%;background:var(--accent);border-radius:3px;"></div></div>
+          <span style="color:var(--grey-light);font-size:12px;">8%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;">
+          <span style="color:var(--grey);width:16px;">3★</span>
+          <div style="flex:1;height:6px;background:var(--steel);border-radius:3px;overflow:hidden;"><div style="width:2%;height:100%;background:var(--accent);border-radius:3px;"></div></div>
+          <span style="color:var(--grey-light);font-size:12px;">2%</span>
+        </div>
+      </div>
+      <div style="width:1px;height:60px;background:var(--border);flex-shrink:0;"></div>
+      <div style="display:flex;gap:32px;flex-wrap:wrap;">
+        <div style="text-align:center;"><div style="font-family:var(--ff-d);font-size:2rem;font-weight:800;color:var(--white);">1000+</div><div style="font-family:var(--ff-a);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);">Happy Clients</div></div>
+        <div style="text-align:center;"><div style="font-family:var(--ff-d);font-size:2rem;font-weight:800;color:var(--white);">25+</div><div style="font-family:var(--ff-a);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);">Years Trust</div></div>
+        <div style="text-align:center;"><div style="font-family:var(--ff-d);font-size:2rem;font-weight:800;color:var(--white);">PAN India</div><div style="font-family:var(--ff-a);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);">Delivery</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- All Reviews Grid -->
+<section style="background:var(--navy);padding:70px 0;">
+  <div class="container">
+    <div class="testi-grid">
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">Gurudatta has been our preferred supplier for over a decade. Spring quality is consistent, delivery is always on time, and the team is helpful with custom specs.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#f0a500;">RJ</div><div><div class="testi-name">Ramesh Joshi</div><div class="testi-role">Procurement Head, Auto Components Ltd., Pune</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">We switched to Gurudatta Trading three years ago and never looked back. Their springs meet IS standards and pricing is very competitive for the quality offered.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#3b8bff;">SN</div><div><div class="testi-name">Sanjay Naik</div><div class="testi-role">Production Manager, Precision Engineers, Nashik</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">The integrated spring calculator on their website is a game changer! I could get spring rate estimates before even placing an enquiry. Very modern approach.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#27ae60;">PD</div><div><div class="testi-name">Priya Deshpande</div><div class="testi-role">Design Engineer, Hydraulics Co., Mumbai</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★☆</div><div class="testi-q">"</div>
+        <p class="testi-txt">Excellent range of connecting springs. The team understood our requirements and provided samples within 48 hours. Highly recommend for industrial use.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#8e44ad;">AM</div><div><div class="testi-name">Arun Mehta</div><div class="testi-role">Purchase Dept., Textile Machinery Works, Surat</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">Best mild steel spring supplier in Mumbai. We source red MS springs from Gurudatta for our export orders for years. Quality and packaging is always top-notch.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#e67e22;">VK</div><div><div class="testi-name">Vikram Kulkarni</div><div class="testi-role">Director, Springex Exports Pvt. Ltd., Mumbai</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">Timely dispatch, great packaging, top-notch quality. Gurudatta Trading Co. is our go-to partner for all spring requirements across our Maharashtra operations.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#c0392b;">NK</div><div><div class="testi-name">Nilesh Kale</div><div class="testi-role">Operations Head, Mfg Solutions India, Aurangabad</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">We needed custom conical springs for a special machine. Gurudatta's team guided us through the entire specification process. Delivered exactly as needed within a week.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#16a085;">DM</div><div><div class="testi-name">Dinesh More</div><div class="testi-role">Mechanical Engineer, Packaging Industries, Thane</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">I compared 5 suppliers before choosing Gurudatta. Best price-to-quality ratio for MS springs. Their stock is always ready and orders ship same day.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#2980b9;">SP</div><div><div class="testi-name">Sunil Patil</div><div class="testi-role">Stores Manager, Farm Equipment Co., Kolhapur</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">The stainless steel springs we ordered for our food-grade conveyor are perfect — exactly to the tolerance specified. Very impressive for a small-batch order.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#8e44ad;">RS</div><div><div class="testi-name">Rajesh Shah</div><div class="testi-role">Production Head, Food Processing Ltd., Pune</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">We've been buying suspension coil springs from Gurudatta for our auto garage for 8 years. Never a single complaint from our customers. Solid product, solid company.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#f39c12;">MK</div><div><div class="testi-name">Mohammad Khan</div><div class="testi-role">Owner, Supreme Auto Workshop, Mumbai</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★★</div><div class="testi-q">"</div>
+        <p class="testi-txt">Very professional team. They understood our drawing immediately and manufactured 500 pieces of custom torsion springs. Delivered on schedule with proper packing.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#27ae60;">AT</div><div><div class="testi-name">Anita Tiwari</div><div class="testi-role">Purchase Manager, Industrial Tools Co., Nagpur</div></div></div>
+      </article>
+
+      <article class="testi-card">
+        <div class="testi-stars">★★★★☆</div><div class="testi-q">"</div>
+        <p class="testi-txt">Good range and reasonable prices. The spring calculator helped me finalize the spec before ordering — saved a lot of back and forth communication. Recommended.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#3b8bff;">HB</div><div><div class="testi-name">Harish Bhatt</div><div class="testi-role">R&amp;D Engineer, Precision Instruments, Ahmedabad</div></div></div>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:56px;padding:40px;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-family:var(--ff-d);font-size:1.8rem;font-weight:800;color:var(--white);margin-bottom:10px;">Ready to experience the difference?</div>
+      <p style="color:var(--grey-light);margin-bottom:24px;">Join 1000+ businesses across India who trust Gurudatta Trading Co.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">📞 Get a Quote</a>
+        <a href="calculator.html" class="btn btn-outline">⚙️ Try Calculator</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-name">GURUDATTA <span>TRADING CO.</span></span>
+        <span class="logo-tag">No.1 Compression · Mumbai</span>
+      </div>
+      <p class="footer-copy">© 2025 Gurudatta Trading Co. All rights reserved.<br>Mild Steel Springs Manufacturer &amp; Supplier, Mumbai, India.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="products.html">Products</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+/* ─── COMMON: runs on every page ─────────────────────────── */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9r26eUhv3lT-A-VvXmpCZIA-NS5VzOxNexrJOie1tNN__SyfNPw_72DDCnzOzWO0W/exec';
+
+/* Header scroll */
+const siteHeader = document.getElementById('site-header');
+if (siteHeader) {
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+
+/* Hamburger */
+const hbtn = document.getElementById('hbtn');
+const mobDrawer = document.getElementById('mob-drawer');
+if (hbtn && mobDrawer) {
+  hbtn.addEventListener('click', () => {
+    const open = mobDrawer.classList.toggle('open');
+    hbtn.setAttribute('aria-expanded', open);
+    mobDrawer.setAttribute('aria-hidden', !open);
+  });
+  document.querySelectorAll('.mdlink').forEach(l => l.addEventListener('click', () => {
+    mobDrawer.classList.remove('open');
+    hbtn.setAttribute('aria-expanded', false);
+  }));
+}
+
+/* Smooth scroll for any anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+
+</script>
+</body>
+</html>
