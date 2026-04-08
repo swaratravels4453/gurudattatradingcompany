@@ -1021,6 +1021,268 @@ footer {
   .rpt-hero-val     { font-size: 1.1rem; }
 }
 
+
+/* ============================================================
+   PARTNERS MARQUEE SECTION
+   ============================================================ */
+
+/* Marquee outer wrapper — clips overflow */
+.partners-track-wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 16px;
+  /* Fade edges left/right */
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+/* Scrolling track — CSS animation */
+.partners-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+.partners-track:hover { animation-play-state: paused; }
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move by half (one set of 6) */
+}
+
+/* Single partner chip */
+.partner-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 22px;
+  min-width: 230px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+.partner-chip:hover {
+  border-color: rgba(240,165,0,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
+/* Coloured logo box */
+.partner-logo-box {
+  width: 56px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.partner-name {
+  font-family: var(--ff-d);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.partner-role {
+  font-family: var(--ff-a);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+
+/* ============================================================
+   CERTIFIED WITH SECTION
+   ============================================================ */
+
+/* 3-column grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Single certificate card */
+.cert-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  overflow: hidden;
+}
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Featured card variant */
+.cert-card-featured {
+  border-color: rgba(240,165,0,0.35);
+  background: linear-gradient(160deg, rgba(21,32,64,0.95), rgba(30,20,5,0.6));
+}
+.cert-card-featured:hover { border-color: var(--accent); }
+
+/* Glowing background orb */
+.cert-glow {
+  position: absolute;
+  top: -30px; left: 50%; transform: translateX(-50%);
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.cert-glow-blue  { background: radial-gradient(circle, rgba(59,139,255,0.18) 0%, transparent 70%); }
+.cert-glow-gold  { background: radial-gradient(circle, rgba(240,165,0,0.22) 0%, transparent 70%); }
+.cert-glow-green { background: radial-gradient(circle, rgba(39,174,96,0.18) 0%, transparent 70%); }
+
+/* Featured tag ribbon */
+.cert-featured-tag {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--accent);
+  color: var(--navy);
+  font-family: var(--ff-a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Icon ring */
+.cert-icon-wrap { margin-bottom: 18px; }
+.cert-icon-ring {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  border: 2.5px solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: certPulse 3s ease-in-out infinite;
+}
+.cert-ring-blue  { border-color: #3b8bff; box-shadow: 0 0 18px rgba(59,139,255,0.3); }
+.cert-ring-gold  { border-color: var(--accent); box-shadow: 0 0 22px rgba(240,165,0,0.4); }
+.cert-ring-green { border-color: #27ae60; box-shadow: 0 0 18px rgba(39,174,96,0.3); }
+
+@keyframes certPulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(59,139,255,0.3); }
+  50%       { box-shadow: 0 0 30px rgba(59,139,255,0.6); }
+}
+.cert-ring-gold  { animation: certPulseGold 3s ease-in-out infinite; }
+@keyframes certPulseGold {
+  0%, 100% { box-shadow: 0 0 22px rgba(240,165,0,0.35); }
+  50%       { box-shadow: 0 0 40px rgba(240,165,0,0.65); }
+}
+
+.cert-icon-text {
+  font-family: var(--ff-d);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* Certified badge pill */
+.cert-badge {
+  display: inline-block;
+  font-family: var(--ff-a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.cert-badge-blue  { background: rgba(59,139,255,0.15); color: #3b8bff; border: 1px solid rgba(59,139,255,0.3); }
+.cert-badge-gold  { background: rgba(240,165,0,0.15); color: var(--accent); border: 1px solid rgba(240,165,0,0.35); }
+.cert-badge-green { background: rgba(39,174,96,0.15); color: #27ae60; border: 1px solid rgba(39,174,96,0.3); }
+
+.cert-name {
+  font-family: var(--ff-d);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.cert-full {
+  font-family: var(--ff-a);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 14px;
+}
+.cert-desc {
+  font-size: 13px;
+  color: var(--grey-light);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.cert-view {
+  font-family: var(--ff-a);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: gap 0.2s;
+}
+.cert-card:hover .cert-view { letter-spacing: 2px; }
+
+/* Certificate thumbnail images */
+.cert-thumb-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.25s;
+}
+.cert-thumb-link:hover { transform: translateY(-4px); }
+.cert-thumb-img {
+  width: 120px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  transition: border-color 0.25s;
+}
+.cert-thumb-link:hover .cert-thumb-img { border-color: var(--accent); }
+.cert-thumb-lbl {
+  font-family: var(--ff-a);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cert-grid { grid-template-columns: 1fr; }
+  .cert-card  { padding: 24px 20px; }
+}
+@media (max-width: 480px) {
+  .partners-track { gap: 12px; }
+  .partner-chip   { min-width: 200px; padding: 12px 16px; }
+}
+
 </style>
 </head>
 <body>
@@ -1148,6 +1410,223 @@ footer {
   </div>
 </section>
 
+
+<!-- ===== CO-PARTNERS / CLIENTS MARQUEE SECTION ===== -->
+<section id="partners-section" style="background:var(--navy-mid);padding:60px 0;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--highlight),transparent);"></div>
+
+  <div class="container" style="margin-bottom:36px;">
+    <div style="text-align:center;">
+      <span class="sec-label">Our Network</span>
+      <h2 class="sec-title" style="text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);">Trusted Partners &amp; Platforms</h2>
+      <p style="color:var(--grey-light);font-size:14px;margin-top:6px;">Associated with India's leading industrial trade platforms and export networks.</p>
+    </div>
+  </div>
+
+  <!-- Infinite auto-scroll marquee -->
+  <div class="partners-track-wrap">
+    <div class="partners-track" id="partners-track">
+
+      <!-- Partner 1: IndiaMART -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#1b75bc;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:1px;">India<span style="color:#f7a800;">MART</span></span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">IndiaMART</div>
+          <div class="partner-role">B2B Marketplace Partner</div>
+        </div>
+      </div>
+
+      <!-- Partner 2: ExportersIndia -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#c0392b;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:0.5px;">EXPORTERS<br>INDIA</span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">ExportersIndia</div>
+          <div class="partner-role">Export Platform Partner</div>
+        </div>
+      </div>
+
+      <!-- Partner 3: Weblink.In -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#2c3e50;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;color:#3498db;letter-spacing:1px;">WEBLINK<span style="color:#fff;">.IN</span></span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">Weblink.In Pvt. Ltd.</div>
+          <div class="partner-role">Digital Platform Partner</div>
+        </div>
+      </div>
+
+      <!-- Partner 4: MSME / Udyam -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:linear-gradient(135deg,#ff6900,#ff9500);">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;letter-spacing:1px;">MSME<br><span style="font-size:.75rem;font-weight:600;letter-spacing:2px;">UDYAM</span></span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">MSME — Udyam</div>
+          <div class="partner-role">Govt. Registered Enterprise</div>
+        </div>
+      </div>
+
+      <!-- Partner 5: GST India -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:linear-gradient(135deg,#138808,#1a6b1a);">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;color:#fff;letter-spacing:1px;">GST <span style="color:#ff9a00;">IN</span></span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">GST Registered</div>
+          <div class="partner-role">27CBBPG9951J1ZB</div>
+        </div>
+      </div>
+
+      <!-- Partner 6: Trade India -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#0057a8;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:1px;">TRADE<span style="color:#ffcc00;">INDIA</span></span>
+        </div>
+        <div class="partner-info">
+          <div class="partner-name">TradeIndia</div>
+          <div class="partner-role">Industrial Trade Network</div>
+        </div>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#1b75bc;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:1px;">India<span style="color:#f7a800;">MART</span></span>
+        </div>
+        <div class="partner-info"><div class="partner-name">IndiaMART</div><div class="partner-role">B2B Marketplace Partner</div></div>
+      </div>
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#c0392b;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:0.5px;">EXPORTERS<br>INDIA</span>
+        </div>
+        <div class="partner-info"><div class="partner-name">ExportersIndia</div><div class="partner-role">Export Platform Partner</div></div>
+      </div>
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#2c3e50;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;color:#3498db;letter-spacing:1px;">WEBLINK<span style="color:#fff;">.IN</span></span>
+        </div>
+        <div class="partner-info"><div class="partner-name">Weblink.In Pvt. Ltd.</div><div class="partner-role">Digital Platform Partner</div></div>
+      </div>
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:linear-gradient(135deg,#ff6900,#ff9500);">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;letter-spacing:1px;">MSME<br><span style="font-size:.75rem;font-weight:600;letter-spacing:2px;">UDYAM</span></span>
+        </div>
+        <div class="partner-info"><div class="partner-name">MSME — Udyam</div><div class="partner-role">Govt. Registered Enterprise</div></div>
+      </div>
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:linear-gradient(135deg,#138808,#1a6b1a);">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;color:#fff;letter-spacing:1px;">GST <span style="color:#ff9a00;">IN</span></span>
+        </div>
+        <div class="partner-info"><div class="partner-name">GST Registered</div><div class="partner-role">27CBBPG9951J1ZB</div></div>
+      </div>
+      <div class="partner-chip">
+        <div class="partner-logo-box" style="background:#0057a8;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:1px;">TRADE<span style="color:#ffcc00;">INDIA</span></span>
+        </div>
+        <div class="partner-info"><div class="partner-name">TradeIndia</div><div class="partner-role">Industrial Trade Network</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CERTIFIED WITH SECTION ===== -->
+<section id="certifications-section" style="background:var(--navy);padding:72px 0;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);"></div>
+
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="sec-label">Quality Assured</span>
+      <h2 class="sec-title" style="text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);">Certified With</h2>
+      <p style="color:var(--grey-light);font-size:14px;max-width:540px;margin:0 auto;line-height:1.7;">Certified with recognised industry standards — our products reflect unmatched quality, safety, and compliance.</p>
+    </div>
+
+    <!-- 3 certificate cards -->
+    <div class="cert-grid">
+
+      <!-- IEC Certificate -->
+      <div class="cert-card" onclick="window.open('https://www.gurudattatradingco.in/certificates.htm#99009','_blank')">
+        <div class="cert-glow cert-glow-blue"></div>
+        <div class="cert-icon-wrap">
+          <div class="cert-icon-ring cert-ring-blue">
+            <span class="cert-icon-text">IEC</span>
+          </div>
+        </div>
+        <div class="cert-badge cert-badge-blue">Certified</div>
+        <div class="cert-name">IEC Certificate</div>
+        <div class="cert-full">Import Export Code</div>
+        <div class="cert-desc">Authorised for international trade and export operations under DGFT, Government of India.</div>
+        <div class="cert-view">View Certificate →</div>
+      </div>
+
+      <!-- ISO Certificate -->
+      <div class="cert-card cert-card-featured" onclick="window.open('https://www.gurudattatradingco.in/certificates.htm#99010','_blank')">
+        <div class="cert-glow cert-glow-gold"></div>
+        <div class="cert-featured-tag">⭐ Featured</div>
+        <div class="cert-icon-wrap">
+          <div class="cert-icon-ring cert-ring-gold">
+            <span class="cert-icon-text">ISO</span>
+          </div>
+        </div>
+        <div class="cert-badge cert-badge-gold">Certified</div>
+        <div class="cert-name">ISO Certificate</div>
+        <div class="cert-full">ISO 9001:2015 QMS</div>
+        <div class="cert-desc">International Quality Management Standard — ensuring consistent product quality and customer satisfaction.</div>
+        <div class="cert-view">View Certificate →</div>
+      </div>
+
+      <!-- Udyam Certificate -->
+      <div class="cert-card" onclick="window.open('https://www.gurudattatradingco.in/certificates.htm#99011','_blank')">
+        <div class="cert-glow cert-glow-green"></div>
+        <div class="cert-icon-wrap">
+          <div class="cert-icon-ring cert-ring-green">
+            <span class="cert-icon-text" style="font-size:.9rem;">UDYAM</span>
+          </div>
+        </div>
+        <div class="cert-badge cert-badge-green">Registered</div>
+        <div class="cert-name">Udyam Certificate</div>
+        <div class="cert-full">MSME Registration</div>
+        <div class="cert-desc">Registered under Ministry of MSME, Government of India. Recognised micro, small & medium enterprise.</div>
+        <div class="cert-view">View Certificate →</div>
+      </div>
+
+    </div>
+
+    <!-- Actual certificate images from the website -->
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:40px;">
+      <a href="https://www.gurudattatradingco.in/certificates.htm#99009" target="_blank" rel="noopener noreferrer" class="cert-thumb-link">
+        <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_99009_20250705171810-small.jpg"
+             alt="IEC Certificate — Gurudatta Trading Co."
+             class="cert-thumb-img"
+             onerror="this.style.display='none'"/>
+        <span class="cert-thumb-lbl">IEC Certificate</span>
+      </a>
+      <a href="https://www.gurudattatradingco.in/certificates.htm#99010" target="_blank" rel="noopener noreferrer" class="cert-thumb-link">
+        <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_99010_20250705171829-small.jpg"
+             alt="ISO Certificate — Gurudatta Trading Co."
+             class="cert-thumb-img"
+             onerror="this.style.display='none'"/>
+        <span class="cert-thumb-lbl">ISO Certificate</span>
+      </a>
+      <a href="https://www.gurudattatradingco.in/certificates.htm#99011" target="_blank" rel="noopener noreferrer" class="cert-thumb-link">
+        <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_99011_20250705171836-small.jpg"
+             alt="Udyam Certificate — Gurudatta Trading Co."
+             class="cert-thumb-img"
+             onerror="this.style.display='none'"/>
+        <span class="cert-thumb-lbl">Udyam Certificate</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- ===== QUICK LINKS STRIP ===== -->
 <section style="background:var(--navy);padding:60px 0;">
   <div class="container" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
@@ -1182,7 +1661,7 @@ footer {
 <script>
 
 /* ─── COMMON: runs on every page ─────────────────────────── */
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzoPFtgY9I1aMWFBmis-kf3yg4LRuJr-nDW_vvzGjnAUMlanAG1xBS5lcdOaBrcRek/exec";
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9r26eUhv3lT-A-VvXmpCZIA-NS5VzOxNexrJOie1tNN__SyfNPw_72DDCnzOzWO0W/exec';
 
 /* Header scroll */
 const siteHeader = document.getElementById('site-header');
