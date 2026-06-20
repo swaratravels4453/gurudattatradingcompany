@@ -115,10 +115,9 @@ nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1
   background: var(--white);
   border-radius: 14px;
   box-shadow: 0 24px 60px rgba(0,0,0,0.45);
-  /* FIX: width stays within parent, never overflows */
   width: 100%;
   min-width: 0;
-  overflow: hidden; /* clips internal content cleanly */
+  overflow: hidden;
 }
 
 .calc-header { background: var(--teal); padding: 18px 24px; text-align: center; border-radius: 14px 14px 0 0; }
@@ -128,7 +127,6 @@ nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1
 .calc-tabs-row {
   padding: 16px 20px 0;
   background: var(--white);
-  /* FIX: prevent overflow */
   overflow: hidden;
 }
 
@@ -150,7 +148,7 @@ nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1
   display: flex;
   gap: 5px;
   flex: 1;
-  min-width: 0; /* FIX: allows shrinking inside flex parent */
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -193,7 +191,21 @@ nav a:hover, nav a.active { color: var(--accent); background: rgba(240,165,0,0.1
 .calc-banner strong { color: var(--teal); }
 
 /* 4 param inputs */
-.calc-params { padding: 14px 20px 4px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.calc-params-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 20px;
+}
+.calc-params-wrap::-webkit-scrollbar { display: none; }
+.calc-params {
+  padding: 14px 0 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  min-width: 520px;
+}
 .cparam { display: flex; flex-direction: column; gap: 4px; }
 .cparam-label { font-size: 10.5px; font-weight: 600; color: #444; font-family: var(--ff-b); line-height: 1.3; }
 .cparam-label .unit-hint { font-size: 10px; color: #888; font-weight: 400; }
@@ -302,7 +314,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
    ============================================================ */
 @media (max-width: 1024px) {
   .calc-layout { grid-template-columns: 1fr; }
-  .calc-params { grid-template-columns: repeat(2, 1fr); }
+  /* calc-params: 4-col with scroll */
   .calc-extra  { grid-template-columns: 1fr 1fr; }
 }
 
@@ -310,7 +322,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
   nav        { display: none; }
   .hamburger { display: flex; }
   .bnav      { display: block; }
-  .calc-params   { grid-template-columns: repeat(2, 1fr); }
+  /* calc-params: 4-col with scroll */
   .calc-extra    { grid-template-columns: 1fr; }
   .calc-user-row { grid-template-columns: 1fr; }
   .rpt-cols      { grid-template-columns: 1fr; }
@@ -322,18 +334,19 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
 
 /* ===== KEY FIX: Small mobile ===== */
 @media (max-width: 480px) {
-  /* FIX: tabs stay in a row — NEVER go column */
+  /* Tabs stay in row, fit inside card */
   .calc-tabs {
-    flex-direction: row !important; /* override any inherited column */
+    flex-direction: row !important;
     gap: 4px;
     width: 100%;
+    overflow: hidden;
   }
 
   .calc-tab {
     flex: 1;
     min-width: 0;
     padding: 8px 2px;
-    font-size: 9px;    /* smaller text to fit in row */
+    font-size: 9px;
     gap: 3px;
     letter-spacing: 0;
   }
@@ -350,21 +363,16 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
     gap: 10px;
   }
 
-  /* Unit toggle takes full width when stacked */
-  .unit-wrap {
-    width: 100%;
-  }
-  .unit-btns {
-    width: 100%;
-  }
-  .unit-btn {
-    flex: 1;
-    text-align: center;
-  }
+  /* Unit toggle full width */
+  .unit-wrap { width: 100%; }
+  .unit-btns { width: 100%; }
+  .unit-btn  { flex: 1; text-align: center; }
+
+  /* calc-tabs-row: no changes needed */
 
   /* Other small-screen adjustments */
   .calc-actions { flex-direction: column; }
-  .calc-params  { grid-template-columns: repeat(2, 1fr); }
+  /* calc-params: 4-col with scroll */
   .calc-extra   { grid-template-columns: 1fr; }
 
   /* Report hero stays compact */
@@ -378,9 +386,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
     font-size: 8px;
     padding: 7px 1px;
   }
-  .calc-tab svg {
-    display: none; /* hide icon on very small screens, keep text */
-  }
+  .calc-tab svg { display: none; }
   .container {
     padding: 0 14px;
   }
@@ -498,7 +504,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
         </div>
 
         <!-- 4 params -->
-        <div class="calc-params" id="calc-params">
+        <div class="calc-params-wrap"><div class="calc-params" id="calc-params">
           <div class="cparam">
             <div class="cparam-label">Wire Dia <span class="unit-hint" id="lbl-wd">(IN)</span></div>
             <div class="design-badge">
@@ -551,7 +557,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
             </div>
             <div class="cparam-sub">Min &nbsp;&nbsp;&nbsp; Max</div>
           </div>
-        </div>
+        </div></div><!-- /calc-params-wrap -->
 
         <!-- Material / End / Wind -->
         <div class="calc-extra">
@@ -630,7 +636,7 @@ footer { background: var(--navy-mid); border-top: 1px solid var(--border); paddi
 </footer>
 
 <script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyt1jfV9unDoQDjgtcHkF8uBksJSXj__ioIw4H3OqoUNcTqq6ifkU7iztBZIQPmoIo/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXob5CrsDgAcwiS5ThSDsyx7ciLqmvRLboYrBhTJpS3fCk1JndZqkk5eIRQArMFg/exec';
 
 const G_MAP = {
   'Music Wire ASTM A228': 81500,
@@ -1038,3 +1044,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 </script>
 </body>
 </html>
+
+
+
